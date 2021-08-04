@@ -20,7 +20,10 @@ $(document).ready(function () {
     })
     $('.statics-slider').owlCarousel({
         loop:false,
-        nav:false,
+        nav:true,
+        navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
+        dots: false,
+        margin: 20,
         responsive:{
             0:{
                 items:1
@@ -33,4 +36,15 @@ $(document).ready(function () {
             }
         }
     })
+    // -- Show Pargaraph On Hover --
+    $(".statics-slider .item").hover(
+        function () {
+          $(this).find('p').slideDown();
+          $(this).css('transform','translateY(-15%)')
+        }, 
+        function () {
+            $(this).find('p').slideUp();
+            $(this).css('transform','unset')
+        }
+        );
 });
