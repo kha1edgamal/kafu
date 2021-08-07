@@ -1,6 +1,12 @@
 $(document).ready(function () {
-        /*Smooth Scroll*/
-     $('a[href*="#"]').smoothscroll();
+    // -- Tooltip init --
+    $('[data-toggle="tooltip"]').tooltip();
+    //-- Remove scrollbar when modal is visible
+    $('.modal').on("hidden.bs.modal", function (e) { 
+        if ($('.modal:visible').length) { 
+            $('body').addClass('modal-open');
+        }
+    });
      //--Owl Init --
      $('.join-slider').owlCarousel({
         animateOut: 'fadeOut',
@@ -19,7 +25,7 @@ $(document).ready(function () {
         }
     })
     $('.statics-slider').owlCarousel({
-        loop:false,
+        loop:true,
         nav:true,
         navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
         dots: false,
@@ -33,6 +39,24 @@ $(document).ready(function () {
             },
             1000:{
                 items:6
+            }
+        }
+    })
+    $('.partners-slider').owlCarousel({
+        loop:false,
+        nav:true,
+        navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
+        dots: false,
+        margin: 20,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:5
             }
         }
     })

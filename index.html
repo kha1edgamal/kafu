@@ -79,8 +79,8 @@
                 <!-- Start Before Sign-In Menu -->
                 <div class="bf-sign">
                     <div class="in-out">
-                        <a href="#"><i class="fas fa-lock"></i>join us</a>
-                        <a href="#"><i class="fas fa-user"></i>sign in</a>
+                        <a href="#" data-toggle="modal" data-target="#signUpModal"><i class="fas fa-lock"></i>join us</a>
+                        <a href="#" data-toggle="modal" data-target="#signInModal"><i class="fas fa-user"></i>sign in</a>
                     </div>
                     <div class="lang">
                         <a href="#">AR</a>
@@ -95,6 +95,129 @@
         </div>
     </header>
     <!-- End Header Section -->
+    <!-- Start  Modals Section -->
+  <!-- Login Modal -->
+    <div class="modal fade solid login" id="signInModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="imgs/times-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="s-input">
+                            <input type="text" placeholder="Mobile/Email">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="s-input">
+                            <input type="password" placeholder="Enter Password">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="s-input checkbox">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">
+                                Remember Me
+                            </label>
+
+                        </div>
+                        <button class="m-btn m-btn-green w-100">sign in</button>
+                        <div class="d-flex">
+                            <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signUpModal">New Account</a>
+                            <a href="#"  data-dismiss="modal" data-toggle="modal" data-target="#forgetPassword">Forget Password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign Up Modal -->
+    <div class="modal fade solid sign-up" id="signUpModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">New Account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="imgs/times-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!-- Add 'invalid' class to 's-input' to make it invalid -->
+                                <div class="s-input invalid">
+                                    <input type="text" placeholder="Your Email*">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="invalid-icon">
+                                        <i class="fas fa-exclamation"></i>
+                                    </div>
+                                </div>
+                                <div class="s-input">
+                                    <input type="password" placeholder="Enter Password*">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="s-input">
+                                    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Your Mobile*">
+                                    <i class="fas fa-mobile"></i>
+                                </div>
+                                <div class="s-input">
+                                    <input type="password" placeholder="Re Enter Password*">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="s-input code">
+                            <div class="d-flex">
+                                <p>you have a invitation code from you friend (optional)</p>
+                                <span><b>+300</b>Point</span>
+                            </div>
+                            <input type="text"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Referal Code">
+                            <i class="fas fa-user-tag"></i>
+                            <a href="#" class="send-btn">Send</a>
+
+                        </div>
+                         <div class="g-recaptcha"
+       data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+                        <button class="m-btn m-btn-green ">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forget Password Modal -->
+    <div class="modal fade solid " id="forgetPassword" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Forget Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="imgs/times-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="s-input">
+                            <input type="text" placeholder="Mobile/Email">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <button class="m-btn m-btn-green w-100">send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Modals Section -->
 
     <!-- Start Main -->
     <main>
@@ -275,68 +398,2268 @@
                         <div class="tab-pane fade show active" id="featured" role="tabpanel" aria-labelledby="featured-tab">
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <div class="top">
-                                        <div class="d-flex">
-                                            <div class="comp-logo">
-                                                <img src="imgs/company-logo.png" alt="">
-                                                <span>
-                                                    <i class="fas fa-star"></i>
-                                                </span>
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
                                             </div>
-                                            <div class="text">
-                                                <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
-                                                <h6>
-                                                    <i class="fas fa-calendar-alt"></i>
-                                                    Survey
-                                                </h6>
-                                                <h6>
-                                                    <i class="fas fa-heart"></i>
-                                                    1288
-                                                </h6>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="bottom">
-                                        <div class="timer d-flex">
-                                            <div>
-                                                <h5>
-                                                    35
-                                                    <span>days</span>
-                                                </h5>
-                                                 :
-                                                 <h5>
-                                                     17
-                                                     <span>hours</span>
-                                                 </h5>
-                                                  :
-                                                 <h5>
-                                                     07
-                                                     <span>mins</span>
-                                                 </h5>
-                                                  :
-                                                  <h5>
-                                                      49
-                                                      <span>secs</span>
-                                                  </h5>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <a href="#" class="m-btn">start</a>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="mostViewd" role="tabpanel" aria-labelledby="mostViewd-tab">...</div>
-                        <div class="tab-pane fade" id="answers" role="tabpanel" aria-labelledby="answers-tab">...</div>
-                        <div class="tab-pane fade" id="latestSurvyes" role="tabpanel" aria-labelledby="latestSurvyes-tab">...</div>
-                        <div class="tab-pane fade" id="polls" role="tabpanel" aria-labelledby="polls-tab">...</div>
+                        <div class="tab-pane fade" id="mostViewd" role="tabpanel" aria-labelledby="mostViewd-tab">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="answers" role="tabpanel" aria-labelledby="answers-tab">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="latestSurvyes" role="tabpanel" aria-labelledby="latestSurvyes-tab">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="polls" role="tabpanel" aria-labelledby="polls-tab">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="survey-card">
+                                        <div class="top">
+                                            <div class="d-flex">
+                                                <div class="comp-logo">
+                                                    <img src="imgs/company-logo.png" alt="">
+                                                    <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit</p>
+                                                    <h6>
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        Survey
+                                                    </h6>
+                                                    <h6>
+                                                        <i class="fas fa-heart"></i>
+                                                        1288
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="timer d-flex">
+                                                <div>
+                                                    <h5>
+                                                        35
+                                                        <span>days</span>
+                                                    </h5>
+                                                     :
+                                                     <h5>
+                                                         17
+                                                         <span>hours</span>
+                                                     </h5>
+                                                      :
+                                                     <h5>
+                                                         07
+                                                         <span>mins</span>
+                                                     </h5>
+                                                      :
+                                                      <h5>
+                                                          49
+                                                          <span>secs</span>
+                                                      </h5>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="m-btn">start</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Start Our Partners Section -->
+        <section class="our-partners">
+            <div class="wave"></div>
+            <div class="container-fluid">
+                <div class="text-center">
+                    <h3 class="kf-title">
+                        Our Partners
+                    </h3>
+                    <h6 class="kf-sub-title">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </h6>
+                </div>
+                <div class="partners-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="logo">
+                            <img src="imgs/company-logo.png" alt="">
+                        </div>
+                        <h5>Daily Meals</h5>
+                    </div>
+                    <div class="item">
+                        <div class="logo">
+                            <img src="imgs/company-logo.png" alt="">
+                        </div>
+                        <h5>Frooz</h5>
+                    </div>
+                    <div class="item">
+                        <div class="logo">
+                            <img src="imgs/company-logo.png" alt="">
+                        </div>
+                        <h5>Anoosh</h5>
+                    </div>
+                    <div class="item">
+                        <div class="logo">
+                            <img src="imgs/company-logo.png" alt="">
+                        </div>
+                        <h5>Mrsool</h5>
+                    </div>
+                    <div class="item">
+                        <div class="logo">
+                            <img src="imgs/company-logo.png" alt="">
+                        </div>
+                        <h5>Jamen</h5>
+                    </div>
+                    <div class="item">
+                        <div class="logo">
+                            <img src="imgs/company-logo.png" alt="">
+                        </div>
+                        <h5>Daily Meals</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Our Partners Section -->
+        <!-- Start contact section -->
+        <section class="contact-us ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="form-sec">
+                            <h2>get in touch</h2>
+                            <p>We are available 24/7 by fax, e-mail or by phone. You can also use our quick contact form to ask a question about our services and projects.</p>
+                            <form action="">
+                                <div class="d-flex">
+                                    <div>
+                                        <input type="text" placeholder="Your Name">
+                                        <input type="email" placeholder="Your Email">
+                                        <input type="text" placeholder="Your Subject">
+                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Your Mobile">
+                                    </div>
+                                    <div>
+                                        <textarea placeholder="Your Message"></textarea>
+                                        <button class="m-btn m-btn-green">send message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="social-sec">
+                            <h6>get social</h6>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="3"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                            <div class="s-info">
+                                <h6>phone</h6>
+                                <div class="d-flex">
+                                    <img src="imgs/phone-icon.svg" alt="">
+                                    <a href="tel:+966123456789">
+                                        <bdi>+966-123-456789</bdi>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="s-info">
+                                <h6>e-mail</h6>
+                                <div class="d-flex">
+                                    <img src="imgs/mail-icon.svg" alt="">
+                                    <a href="mailto:Support@kafuapp.com">
+                                        <bdi>Support@kafuapp.com</bdi>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="s-info">
+                                <h6>website</h6>
+                                <div class="d-flex">
+                                    <img src="imgs/website-icon.svg" alt="">
+                                    <a href="#"><bdi>www.kafuapp.com</bdi></a>
+                                </div>
+                            </div>
+                            <div class="s-info">
+                                <h6>address</h6>
+                                <div class="d-flex">
+                                    <img src="imgs/address-icon.svg" alt="">
+                                    <bdi>5477 Jaddah City., Abd alazez st, 8875</bdi>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End contact section -->
+        <!-- Start Map Section -->
+        <section class="map">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d475322.6559104558!2d38.9309614828894!3d21.450528938086823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d01fb1137e59%3A0xe059579737b118db!2sJeddah%20Saudi%20Arabia!5e0!3m2!1sen!2seg!4v1628268905141!5m2!1sen!2seg" width="100%" height="370" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+        <!-- End Map Section -->
+        <!-- Start Newsletter section -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text">
+                            <h1>
+                                <i class="fas fa-newspaper"></i>
+                                newsletter
+                            </h1>
+                            <p>Keep up with our always upcoming news and updates. Enter your e-mail and subscribe to our newsletter.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 m-auto">
+                        <form action="">
+                            <input type="email" placeholder="Enter Your Email ..">
+                            <input type="submit" value="Subscribe" class="m-btn m-btn-green">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Newsletter section -->
     </main>
     <!-- End Main -->
+    <!-- Start footer section -->
+    <footer>
+        <div class="cpy">
+            © 2021 - Kafu all rights reserved.
+        </div>
+    </footer>
+    <!-- End footer section -->
+    <div class="customer-support">
+        <a href="#" data-toggle="tooltip" data-placement="bottom"
+        title="" data-original-title="Have a question?"
+        >
+            <span>
+                <img src="imgs/customer-service-agent.svg" alt="">
+            </span>
+    </a>
+    </div>
     
 
     <!--Jquery Minified JS-->
@@ -346,7 +2669,11 @@
 
     <script src="js/wow.min.js"></script>
     <!--Bootstrap Minified JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+       <script> function registerFormCheck(){} </script>
+   <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="js/recaptcha.js"></script>
     
 
     <!--ScrollBar-->
