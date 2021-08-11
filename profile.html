@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kafu | Profile</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="imgs/logo.svg">
+    <!--Bootstrap Minified-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Select2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+    <!-- 
+        -----Uncomment this for arabic version -----
+        <link rel="stylesheet" href="css/bootstrap-rtl.min.css"> -->
+
+    <!--FontAwesome Styles-->
+    <link rel="stylesheet" href="css/all.css">
+    <!--Animate.css-->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!--Scroll-->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!--Owl Carousel-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!--Main Style-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--For English-->
+    <!--<link rel="stylesheet" href="css/style-en.css">-->
+    <!--Media Style-->
+    <link rel="stylesheet" href="css/media.css">
+    <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+    <![endif]-->
+   
+</head>
+
+<body class="preload">
+    <!--Start Preloader Section-->
+    <div class="screen">
+        <div class="loader">
+            <!--Preloader HTML-->
+        </div>
+    </div>
+    <!--End Preloader Section-->
+    <!-- Start Header Section -->
+    <!-- 
+        Add 'logged' class to header to make it logged in header 
+        And without 'logged' class for guests
+     -->
+    <header class="logged">
+        <div class="container-fluid">
+            <div class="d-flex">
+                <div class="logo-nav d-flex">
+                    <div class="logo">
+                        <img src="imgs/logo.svg" alt="">
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="active">
+                                <a href="#">home</a>
+                            </li>
+                            <li>
+                                <a href="#">about</a>
+                            </li>
+                            <li>
+                                <a href="#">survey</a>
+                            </li>
+                            <li>
+                                <a href="#">services</a>
+                            </li>
+                            <li>
+                                <a href="#">partners</a>
+                            </li>
+                            <li>
+                                <a href="#">contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Start Before Sign-In Menu -->
+                <div class="bf-sign">
+                    <div class="in-out">
+                        <a href="#" data-toggle="modal" data-target="#signUpModal"><i class="fas fa-lock"></i>join us</a>
+                        <a href="#" data-toggle="modal" data-target="#signInModal"><i class="fas fa-user"></i>sign in</a>
+                    </div>
+                    <div class="lang">
+                        <a href="#">AR</a>
+                    </div>
+                </div>
+                <!-- End Before Sign-In Menu -->
+
+                <!-- Start After Sign-In Menu -->
+                <div class="af-sign">
+                    <div class="profile-info">
+                        <div class="user-img">
+                            <img src="imgs/default-user.png" alt="">
+                            <div class="pf-progress">
+                                <svg class="progress-ring" width="120" height="120">
+                                    <circle class="progress-ring__circle" stroke="#FF9054" stroke-width="4" fill="transparent" r="52" cx="60" cy="60" />
+                                </svg>
+
+                            </div>
+                            <!-- Put progress percentage in value attribute -->
+                            <input value="85" type="hidden" >
+                        </div>
+                        <div class="user-info">
+                            <h5>User Name</h5>
+                            <h6>
+                                <span><img src="imgs/wallet-icon.svg" alt=""></span>
+                                500pts
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fas fa-search"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-cog"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-bell"></i>
+                                    <b>5</b>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End After Sign-In Menu -->
+            </div>
+        </div>
+    </header>
+    <!-- End Header Section -->
+    <!-- Start  Modals Section -->
+  <!-- Login Modal -->
+    <div class="modal fade solid login" id="signInModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="imgs/times-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="s-input">
+                            <input type="text" placeholder="Mobile/Email">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="s-input">
+                            <input type="password" placeholder="Enter Password">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="s-input checkbox">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">
+                                Remember Me
+                            </label>
+
+                        </div>
+                        <button class="m-btn m-btn-green w-100">sign in</button>
+                        <div class="d-flex">
+                            <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signUpModal">New Account</a>
+                            <a href="#"  data-dismiss="modal" data-toggle="modal" data-target="#forgetPassword">Forget Password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign Up Modal -->
+    <div class="modal fade solid sign-up" id="signUpModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">New Account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="imgs/times-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!-- Add 'invalid' class to 's-input' to make it invalid -->
+                                <div class="s-input invalid">
+                                    <input type="text" placeholder="Your Email*">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="invalid-icon">
+                                        <i class="fas fa-exclamation"></i>
+                                    </div>
+                                </div>
+                                <div class="s-input">
+                                    <input type="password" placeholder="Enter Password*">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="s-input">
+                                    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Your Mobile*">
+                                    <i class="fas fa-mobile"></i>
+                                </div>
+                                <div class="s-input">
+                                    <input type="password" placeholder="Re Enter Password*">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="s-input ref-code">
+                            <div class="d-flex">
+                                <p>you have a invitation code from you friend (optional)</p>
+                                <span><b>+300</b>Point</span>
+                            </div>
+                            <input type="text"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Referal Code">
+                            <i class="fas fa-user-tag"></i>
+                            <a href="#" class="send-btn">Send</a>
+
+                        </div>
+                         <div class="g-recaptcha"
+       data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+                        <button class="m-btn m-btn-green ">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forget Password Modal -->
+    <div class="modal fade solid " id="forgetPassword" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Forget Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="imgs/times-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="s-input">
+                            <input type="text" placeholder="Mobile/Email">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <button class="m-btn m-btn-green w-100">send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Modals Section -->
+    <!-- Start Wrapper -->
+    <div class="wrapper profile-wrap">
+        <!-- Start Main -->
+        <main>
+            <div class="pg-head">
+                <div class="container-fluid">
+                    <div class="d-flex">
+                        <div>
+                            <h1 class="title">Complete your profile</h1>
+                            <div class="kf-breadcrumb">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">My Profile</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="complete-text">
+                            <span>80%</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Start Edit Profile Section -->
+            <section class="edit-profile">
+                <div class="container">
+                    <form action="#">
+                        <div class="ed-image">
+                            <div class="avatar-upload">
+                                <div class="avatar-edit">
+                                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                    <label for="imageUpload"></label>
+                                </div>
+                                <div class="avatar-preview">
+                                    <div id="imagePreview" style="background-image: url(https://karateinthewoodlands.com/wp-content/uploads/2017/09/default-user-image.png);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-sec">
+                            <h5 class="sub-title">Information</h5>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fas fa-address-card"></i>
+                                        </div>
+                                        <select class="m-select" name="state" data-placeholder="Choose Personal">
+                                            <option></option>
+                                            <option value="v1">Personal1</option>
+                                            <option value="v2">Personal2</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input invalid">
+                                        <div class="icon">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <input type="text" placeholder="Your Name*">
+                                        <div class="invalid-icon">
+                                            <i class="fas fa-exclamation"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <input type="email" placeholder="Your Email*" value="Malshanti@hotmail.com">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fas fa-mobile"></i>
+                                        </div>
+                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Your Phone*" value="+970599933399">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="far fa-calendar-alt"></i>
+                                        </div>
+                                        <input type="text"  placeholder="Birthday" >
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fas fa-hand-holding-heart"></i>
+                                        </div>
+                                        <select class="m-select" name="state" data-placeholder ='Marital Status'>
+                                            <option></option>
+                                            <option value="v1">Married</option>
+                                            <option value="v2">Single</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fas fa-venus-mars"></i>
+                                        </div>
+                                        <select class="m-select" name="state" data-placeholder="Gender">
+                                            <option value=""></option>
+                                            <option value="v1">Male</option>
+                                            <option value="v2">Female</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fas fa-flag"></i>
+                                        </div>
+                                        <input type="text"  placeholder="Country" >
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <input type="text"  placeholder="City" >
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <input type="text"  placeholder="City" >
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <select class="m-select" name="state" data-placeholder="Employment status">
+                                            <option value=""></option>
+                                            <option value="v1">Status 1</option>
+                                            <option value="v2">Status 2</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="interest-sec">
+                            <h5 class="sub-title">Interests</h5>
+                            <div class="d-flex">
+                                <div class="-input">
+                                    <input type="checkbox" id="check1" hidden>
+                                    <label for="check1" class="ch-label">
+                                        <img src="imgs/check-icon.svg" alt="">
+                                        <h3>Leisure & entertainment
+                                            <span>Install to get points</span>
+                                        </h3>
+                                    </label>
+                                </div>
+                                <div class="-input">
+                                    <input type="checkbox" id="check2" hidden>
+                                    <label for="check2" class="ch-label">
+                                        <img src="imgs/check-icon.svg" alt="">
+                                        <h3>Leisure & entertainment
+                                            <span>Install to get points</span>
+                                        </h3>
+                                    </label>
+                                </div>
+                                <div class="-input">
+                                    <input type="checkbox" id="check3" hidden>
+                                    <label for="check3" class="ch-label">
+                                        <img src="imgs/check-icon.svg" alt="">
+                                        <h3>Leisure & entertainment
+                                            <span>Install to get points</span>
+                                        </h3>
+                                    </label>
+                                </div>
+                                <div class="-input">
+                                    <input type="checkbox" id="check4" hidden>
+                                    <label for="check4" class="ch-label">
+                                        <img src="imgs/check-icon.svg" alt="">
+                                        <h3>Leisure & entertainment
+                                            <span>Install to get points</span>
+                                        </h3>
+                                    </label>
+                                </div>
+                                <div class="-input">
+                                    <input type="checkbox" id="check5" hidden>
+                                    <label for="check5" class="ch-label">
+                                        <img src="imgs/check-icon.svg" alt="">
+                                        <h3>Leisure & entertainment
+                                            <span>Install to get points</span>
+                                        </h3>
+                                    </label>
+                                </div>
+                                <div class="-input">
+                                    <input type="checkbox" id="check6" hidden>
+                                    <label for="check6" class="ch-label">
+                                        <img src="imgs/check-icon.svg" alt="">
+                                        <h3>Leisure & entertainment
+                                            <span>Install to get points</span>
+                                        </h3>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-sec">
+                            <h5 class="sub-title">Social Media</h5>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fab fa-facebook-f" style="color:#3b5998"></i>
+                                        </div>
+                                        <input type="text" placeholder="Facebook" >
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fab fa-twitter" style="color:#1da1f2"></i>
+                                        </div>
+                                        <input type="text" placeholder="Twitter" >
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fab fa-instagram" style="color:#c32aa3"></i>
+                                        </div>
+                                        <input type="text" placeholder="Instagram" >
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fab fa-google" style="color:#34a853"></i>
+                                        </div>
+                                        <input type="text" placeholder="Google" >
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fab fa-linkedin-in" style="color:#0a66c2"></i>
+                                        </div>
+                                        <input type="text" placeholder="Linkedin" >
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fab fa-youtube" style="color:#ff0000" ></i>
+                                        </div>
+                                        <input type="text" placeholder="Youtube"  >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="your-code">
+                            <h5 class="sub-title">Your Code 
+                                <span>share this code with your friend to get 500 points</span>
+                            </h5>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="-input">
+                                        <div class="icon">
+                                            <i class="fas fa-user-tag" style="color: #1BBAA2"></i>
+                                        </div>
+                                        <input type="text"  placeholder="Code" value="887DW9987"  >
+                                        <a href="#"  class="code-cpy"><i class="fas fa-copy"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="referral-code">
+                            <h5 class="sub-title">
+                                Referral Code 
+                                <span>win 500 pints enter the code here</span>
+                            </h5>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="-input ref-code">
+                                        <div class="d-flex">
+                                            <p>you have a invitation code from you friend (optional)</p>
+                                            <span><b>+500</b>Point</span>
+                                        </div>
+                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Referal Code">
+                                        <div class="icon">
+                                            <i class="fas fa-tag"></i>
+                                        </div>
+                                        <a href="#" class="send-btn">Activation</a>
+            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns-sec d-flex col-xs-12">
+                            <button class="btn-save m-btn m-btn-green">Save</button>
+                            <button class="btn-complete m-btn">Complete</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="cpy-toast"></div>
+            </section>
+            <!-- End  Edit Profile Section -->
+        </main>
+        <!-- End Main -->
+    </div>
+    <!-- End wrapper -->
+    <!-- Start footer section -->
+    <footer>
+        <div class="cpy">
+            © 2021 - Kafu all rights reserved.
+        </div>
+    </footer>
+    <!-- End footer section -->
+    <div class="customer-support">
+        <a href="#" data-toggle="tooltip" data-placement="bottom"
+        title="" data-original-title="Have a question?"
+        >
+            <span>
+                <img src="imgs/customer-service-agent.svg" alt="">
+            </span>
+    </a>
+    </div>
+    
+
+    <!--Jquery Minified JS-->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!--Owl Carousel JS-->
+    <script src="js/owl.carousel.min.js"></script>
+    
+
+    <script src="js/wow.min.js"></script>
+    <!--Bootstrap Minified JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+       <script> function registerFormCheck(){} </script>
+   <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="js/recaptcha.js"></script>
+    
+<!-- Select2 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.full.min.js"></script>
+    <!--ScrollBar-->
+    <script src="js/jquery.smoothscroll.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--Main Script-->
+    <script src="js/script.js"></script>
+
+    
+    
+
+</body>
+
+</html>

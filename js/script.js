@@ -70,5 +70,64 @@ $(document).ready(function () {
             $(this).find('p').slideUp();
             $(this).css('transform','unset')
         }
-        );
+    );
+    //-- Sticky Header On Scroll --
+    $(window).scroll(function(){
+        var header = $('header'),
+            scroll = $(window).scrollTop();
+      
+        if (scroll >= 100) header.addClass('sticky');
+        else header.removeClass('sticky');
+      });
+
+    //-- Profile progress bar --
+    var circle = document.querySelector('circle');
+    var radius = circle.r.baseVal.value;
+    var circumference = radius * 2 * Math.PI;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = `${circumference}`;
+
+    function setProgress(percent) {
+        const offset = circumference - percent / 100 * circumference;
+        circle.style.strokeDashoffset = offset;
+    }
+
+    const input = document.querySelector('input');
+    setProgress(input.value);
+
+    input.addEventListener('change', function (e) {
+        if (input.value < 101 && input.value > -1) {
+            setProgress(input.value);
+        }
+    })
+
+    //-- Read Uploaded user profile picture --
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+                $('#imagePreview').hide();
+                $('#imagePreview').fadeIn(650);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("#imageUpload").change(function() {
+        readURL(this);
+    });
+    // -- Select2 Init --
+    $(".m-select").select2({
+        width: '100%',
+        containerCssClass: "pf-select"
+    });
+    //--Toast msg when copy--
+    
+    $('.code-cpy').click(function (e) {
+        e.preventDefault();
+        $('.cpy-toast').html('Copied!').fadeIn().delay(2000).fadeOut();
+    });
+    
+
 });
