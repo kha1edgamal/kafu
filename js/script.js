@@ -120,7 +120,8 @@ $(document).ready(function () {
     // -- Select2 Init --
     $(".m-select").select2({
         width: '100%',
-        containerCssClass: "pf-select"
+        containerCssClass: "pf-select",
+        minimumResultsForSearch: -1
     });
     //--Toast msg when copy--
     

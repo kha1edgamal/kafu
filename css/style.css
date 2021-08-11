@@ -1465,6 +1465,9 @@ body.remove-scroll{
     transform: translateY(-50%);
     right: 20px;
   }
+  .select2-dropdown{
+        border-color:  #EDEDF7
+  }
  .profile-wrap .-input > .ch-label {
      display: flex;
      align-items: center;
