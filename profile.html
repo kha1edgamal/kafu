@@ -62,7 +62,7 @@
                     <nav>
                         <ul>
                             <li class="active">
-                                <a href="#">home</a>
+                                <a href="index.html">home</a>
                             </li>
                             <li>
                                 <a href="#">about</a>
@@ -117,21 +117,76 @@
                         </div>
                     </div>
                     <div class="profile-actions">
-                        <ul>
-                            <li>
+                        <ul class="main-ul">
+                            <li class="has-child">
                                 <a href="#"><i class="fas fa-search"></i></a>
+                                <div class="search-inp s-menu">
+                                    <input type="search" placeholder="Search...">
+                                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                                </div>
                             </li>
-                            <li>
+                            <li class="has-child">
                                 <a href="#"><i class="fas fa-cog"></i></a>
+                                <div class="settings  s-menu">
+                                    <a href="profile.html">My Account</a>
+                                    <a href="terms-condition.html">Terms & Condition</a>
+                                    <a href="privacy-policy.html">Privacy Policy</a>
+                                    <a href="#" data-toggle="modal" data-target="#forgetPassword">Forget Password</a>
+                                    <a href="#">Logout</a>
+                                </div>
                             </li>
-                            <li>
+                            <li class="has-child">
                                 <a href="#"><i class="fas fa-globe"></i></a>
+                                <div class="settings langs s-menu">
+                                    <a href="#">عربي</a>
+                                    <a href="#">English</a>
+                                </div>
                             </li>
-                            <li>
+                            <li class="has-child">
                                 <a href="#">
                                     <i class="fas fa-bell"></i>
-                                    <b>5</b>
+                                    <b>4</b>
                                 </a>
+                                <div class="s-menu notifications">
+                                    <!-- Add class new for unread notificaion -->
+                                    <a href="#" class="d-flex new">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="d-flex new">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="d-flex">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="d-flex">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="view-all">View All</a>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -505,7 +560,7 @@
                                 <div class="col-lg-4">
                                     <div class="-input">
                                         <div class="icon">
-                                            <i class="fab fa-google" style="color:#34a853"></i>
+                                            <i class="fab fa-google" style="color:#ea4335"></i>
                                         </div>
                                         <input type="text" placeholder="Google" >
                                     </div>

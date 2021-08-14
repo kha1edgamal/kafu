@@ -200,6 +200,7 @@ select {
     transition: all .3s;
     border:1px solid;
     cursor: pointer;
+    text-align: center;
 }
 
 .m-btn:hover{
@@ -453,13 +454,14 @@ header .af-sign .profile-info .pf-progress .progress-ring__circle {
   header .af-sign .profile-info .user-info h6 span{
       vertical-align: baseline;
   }
-  header .af-sign .profile-actions ul {
+  header .af-sign .profile-actions  ul.main-ul {
       display : flex;
   }
-  header .af-sign .profile-actions ul li:not(:last-child){
+  header .af-sign .profile-actions  ul.main-ul > li:not(:last-child){
       margin-right: 15px;
   }
-  header .af-sign .profile-actions ul li a {
+ 
+  header .af-sign .profile-actions  ul.main-ul > li > a {
       width:57px;
       height:57px;
       display: flex;
@@ -471,16 +473,16 @@ header .af-sign .profile-info .pf-progress .progress-ring__circle {
     border: 2px solid transparent;
     transition: all .3s;      
   }
-  header .af-sign .profile-actions ul li:hover a{
+  header .af-sign .profile-actions  ul.main-ul > li:hover a{
       border-color:#343456;
       transition: all .3s;
   }
   
-  header .af-sign .profile-actions ul li a > i {
+  header .af-sign .profile-actions  ul.main-ul > li a > i {
     color: #343456;
     font-size: 20px
   }
-  header .af-sign .profile-actions ul li a > b {
+  header .af-sign .profile-actions  ul.main-ul > li a > b {
       width: 25px;
       height: 25px;
       display: flex;
@@ -493,6 +495,163 @@ header .af-sign .profile-info .pf-progress .progress-ring__circle {
       right: -5px;
       border-radius: 50%;
   }
+  header .af-sign li.has-child{
+    position: relative;
+}
+header .af-sign li.has-child:after{
+    position: absolute;
+    content: '';
+    background-image: url(../imgs/Group\ 1480.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    bottom: -23px;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    z-index: 101;
+}
+header .af-sign li.has-child:hover:after{
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s;
+}
+
+header .af-sign li.has-child .search-inp{
+    width:300px;
+}
+header .af-sign li.has-child .search-inp input{
+    border: 0;
+    outline: 0;
+    padding:20px 40px 20px 20px;
+    background-color: #F7F7FC;
+    border-radius: 30px;
+    border:1px solid transparent;
+    width:100%;
+    transition: all .3s;
+}
+header .af-sign li.has-child .search-inp input:focus{
+    border-color:#343456;
+    transition: all .3s;
+}
+header .af-sign li.has-child .search-inp .search-btn{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    cursor: pointer;
+    right: 20px;
+}
+header .af-sign li.has-child .s-menu{
+  padding: 3px;
+  background-color: #fff;
+  border-radius: 30px;
+  position: absolute;
+  box-shadow: 0 24px 25px #00000017;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .1s;
+  top: 0;
+  transform: translate(-50%, 69px);
+  z-index: 100;
+}
+header .af-sign li.has-child:hover .s-menu {
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s;
+}
+header .af-sign  .settings {
+    width: 200px;
+}
+header .af-sign  .langs{
+    width:150px
+}
+header .af-sign  .settings a{
+    padding:  20px 0;
+    background-color: #F7F7FC ;
+    color: #343456;
+    text-align: center;
+    display: block;
+    width: 100%;
+    transition: all .3s;
+}
+header .af-sign  .settings a:hover{
+    background-color: #343456;
+    color: #fff;
+    transition: all .3s;
+}
+header .af-sign  .settings a:not(:last-child){
+    border-bottom: 1px solid #fff !important
+}
+header .af-sign  .settings a:first-child,
+header .af-sign .notifications .d-flex:first-child{
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+header .af-sign  .settings a:last-child,
+header .af-sign .notifications .view-all{
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+header .af-sign .notifications {
+    width: 350px;
+}
+header .af-sign .notifications .d-flex{
+    padding:20px;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+header .af-sign .notifications .d-flex:not(:last-child){
+    border-bottom: 1px solid #EDEDF7 !important
+}
+header .af-sign .notifications .d-flex.new {
+    background : #F7F7FC;
+}
+header .af-sign .notifications .logo{
+    max-width: 50px;
+    max-height: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    border: 1px solid #EDEDF7;
+    margin-right: 15px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+header .af-sign .notifications .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+header .af-sign .notifications .d-flex >  p b{
+    vertical-align: baseline;
+}
+header .af-sign .notifications .d-flex >  p span{
+    display: block;
+    font-size: 11px;
+    color: #7A7A7D
+}
+header .af-sign .notifications .view-all {
+    text-transform: uppercase;
+    background-color: #E3E3EB;
+    padding:20px 0;
+    font-family: noto-bd;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+}
+header .af-sign .notifications .view-all:hover{
+    opacity: .8;
+    transition: all .3s;
+}
 /* End Header Style */
 /* Start Hero Style */
 .hero .join-slider .owl-dots{
@@ -1131,9 +1290,7 @@ footer .cpy {
 }
 /* /Cusomter Support Fixed Button */
 /* Start Modals Style */
-body.remove-scroll{
-    overflow: hidden;
-}
+
 .modal.solid ~ .modal-backdrop.show{
     background-color: #343456;
     opacity: 1;
@@ -1237,8 +1394,40 @@ body.remove-scroll{
 .modal.login .d-flex > a:hover{
     text-decoration: underline;
 }
-.modal.sign-up .modal-dialog{
+.modal.sign-up .modal-dialog,
+.modal.welcome .modal-dialog{
     max-width:700px;
+}
+.modal.welcome .d-flex{
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal.welcome .d-flex h1 {
+    font-family: noto-bd;
+    font-size:60px;
+    text-transform: uppercase;
+    margin: 20px
+}
+.modal.welcome .d-flex h1 span{
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'noto-bd';
+    letter-spacing: 10px;
+}
+.modal.welcome .d-flex p {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+.modal.welcome .d-flex p b {
+    font-size: inherit;
+    vertical-align: baseline;
+    color: #1BBAA2
+}
+.modal.welcome .d-flex .m-btn{
+    width: 400px;
 }
 .ref-code{
     padding:15px 20px;

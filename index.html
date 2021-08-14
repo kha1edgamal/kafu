@@ -50,7 +50,7 @@
         Add 'logged' class to header to make it logged in header 
         And without 'logged' class for guests
      -->
-    <header class="logged">
+     <header class="">
         <div class="container-fluid">
             <div class="d-flex">
                 <div class="logo-nav d-flex">
@@ -60,7 +60,7 @@
                     <nav>
                         <ul>
                             <li class="active">
-                                <a href="#">home</a>
+                                <a href="index.html">home</a>
                             </li>
                             <li>
                                 <a href="#">about</a>
@@ -115,21 +115,76 @@
                         </div>
                     </div>
                     <div class="profile-actions">
-                        <ul>
-                            <li>
+                        <ul class="main-ul">
+                            <li class="has-child">
                                 <a href="#"><i class="fas fa-search"></i></a>
+                                <div class="search-inp s-menu">
+                                    <input type="search" placeholder="Search...">
+                                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                                </div>
                             </li>
-                            <li>
+                            <li class="has-child">
                                 <a href="#"><i class="fas fa-cog"></i></a>
+                                <div class="settings  s-menu">
+                                    <a href="profile.html">My Account</a>
+                                    <a href="terms-condition.html">Terms & Condition</a>
+                                    <a href="privacy-policy.html">Privacy Policy</a>
+                                    <a href="#" data-toggle="modal" data-target="#forgetPassword">Forget Password</a>
+                                    <a href="#">Logout</a>
+                                </div>
                             </li>
-                            <li>
+                            <li class="has-child">
                                 <a href="#"><i class="fas fa-globe"></i></a>
+                                <div class="settings langs s-menu">
+                                    <a href="#">عربي</a>
+                                    <a href="#">English</a>
+                                </div>
                             </li>
-                            <li>
+                            <li class="has-child">
                                 <a href="#">
                                     <i class="fas fa-bell"></i>
-                                    <b>5</b>
+                                    <b>4</b>
                                 </a>
+                                <div class="s-menu notifications">
+                                    <!-- Add class new for unread notificaion -->
+                                    <a href="#" class="d-flex new">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="d-flex new">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="d-flex">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="d-flex">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="view-all">View All</a>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -219,7 +274,7 @@
                             </div>
                         </div>
                         
-                        <div class="s-input code">
+                        <div class="s-input ref-code">
                             <div class="d-flex">
                                 <p>you have a invitation code from you friend (optional)</p>
                                 <span><b>+300</b>Point</span>
@@ -231,7 +286,7 @@
                         </div>
                          <div class="g-recaptcha"
        data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
-                        <button class="m-btn m-btn-green ">Register</button>
+                        <button data-dismiss="modal" data-toggle="modal" data-target="#welcome" class="m-btn m-btn-green ">Register</button>
                     </form>
                 </div>
             </div>
@@ -256,6 +311,28 @@
                         </div>
                         <button class="m-btn m-btn-green w-100">send</button>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div class="modal fade solid welcome " id="welcome" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <img src="imgs/welcome-img.png" alt="">
+                        <h1>welcome
+                            <span>to kafu survey</span>
+                        </h1>
+                        <p>
+                            "Complete your profile to get free <b>300</b> points for sign up."
+                        </p>
+                        <a href="profile.html" class="m-btn m-btn-green">complite your profile</a>
+                    </div>
                 </div>
             </div>
         </div>
