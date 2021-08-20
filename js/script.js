@@ -23,7 +23,7 @@ $(document).ready(function () {
                 items:1
             }
         }
-    })
+    });
     $('.statics-slider').owlCarousel({
         loop:true,
         nav:true,
@@ -41,7 +41,7 @@ $(document).ready(function () {
                 items:6
             }
         }
-    })
+    });
     $('.partners-slider').owlCarousel({
         loop:false,
         nav:true,
@@ -59,7 +59,58 @@ $(document).ready(function () {
                 items:5
             }
         }
-    })
+    });
+    $('.timer-slider .slider').owlCarousel({
+        loop:false,
+        nav:true,
+        navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
+        dots: false,
+        margin: 0,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    });
+    $('.app-slider .owl-carousel').on('initialized.owl.carousel translate.owl.carousel', function(e){
+        idx = e.item.index;
+        $('.owl-item.smaller').removeClass('smaller');
+        $('.owl-item.medium').removeClass('medium');
+        $('.owl-item').eq(idx).addClass('smaller');
+        $('.owl-item').eq(idx+1).addClass('medium');
+        $('.owl-item').eq(idx+3).addClass('medium');
+        $('.owl-item').eq(idx+4).addClass('smaller smaller-2');
+    });
+    $('.app-slider .owl-carousel').owlCarousel({
+        loop:true,
+        autoplay: true,
+        rewind:true,
+        autoplayTimeout:2000,
+        nav:false,
+        center: true,
+        touchDrag  : false,
+        mouseDrag  : false,
+        dots: false,
+        margin: 30,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:5
+            }
+        }
+    });
+   
     // -- Show Pargaraph On Hover --
     $(".statics-slider .item").hover(
         function () {
