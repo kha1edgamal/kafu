@@ -212,6 +212,9 @@ select {
     background-color: #1BBAA2;
    
 }
+.m-btn-gradient{
+    background-image: linear-gradient(to right, #FFAE3B , #FF716F);
+}
 .m-btn-green:hover{
     border-color: #1BBAA2;
     color: #1bbaa2
@@ -290,6 +293,29 @@ select {
     right:1px;
     transform:translateY(-50%);
     font-size: 12px;
+}
+.m-pagination{
+    margin: 30px 0
+}
+.m-pagination ul li a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all .3s;
+    font-size: 16px;
+}
+.m-pagination ul li a:hover{
+    text-decoration: underline;
+}
+.m-pagination ul li.active a{
+    background: #343456;
+    color: #fff;
+}
+.m-pagination ul li.disable a{
+    opacity: .5
 }
 @font-face {
     font-family: noto-bd;
@@ -741,7 +767,14 @@ header .af-sign .notifications .view-all:hover{
      background-repeat: no-repeat;
      background-position: center;
  }
- 
+ .home-wrap .my-stats .d-flex > div .icon:after{
+    animation: rotateAnim 1s linear;
+ }
+ @keyframes rotateAnim {
+
+    0% {transform:rotate(0deg);}
+  100% {transform:rotate(360deg)}
+ }
  .hero .bottom-sec .statics-slider .item .icon img{
      object-fit: contain;
      width: 45px;
@@ -842,7 +875,11 @@ header .af-sign .notifications .view-all:hover{
 }
 .services .info p {
     font-size: 15px;
-    line-height: 25px;
+    min-height: 70px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 .services .info ul{
     margin-top: 50px
@@ -1060,6 +1097,7 @@ header .af-sign .notifications .view-all:hover{
     width: 100%;
     height: 100%;
     border-radius: 30px;
+    animation: loadProgressBar 1s linear;
 }
 .survey-card .poll-card .answers li h6{
     margin-bottom: 5px
@@ -1119,7 +1157,7 @@ header .af-sign .notifications .view-all:hover{
 .survey-card .poll-card .vote .d-flex li i {
     color: #343456;
     font-size: 11px;
-    vertical-align: middle;
+    vertical-align: baseline;
 }
 .survey-card .poll-card .vote .m-btn{
     width: 100px;
@@ -1444,10 +1482,9 @@ footer .social ul li:hover a i {
 /* /Cusomter Support Fixed Button */
 /* Start Modals Style */
 
-.modal.solid ~ .modal-backdrop.show{
-    background-color: #343456;
+/* .modal.solid ~ .modal-backdrop.show{
     opacity: 1;
-}
+} */
 .modal.login .modal-dialog{
     width:483px;
 }
@@ -2017,7 +2054,12 @@ footer .social ul li:hover a i {
     height: 20px;
     position: relative;
     border-radius: 20px;
+    animation: loadProgressBar 1s linear;
 }
+@keyframes loadProgressBar {
+
+    0% {width: 0;}
+ }
 .home-wrap .my-stats .web-mob .box .m-progress  .num{
     position: absolute;
     right: -35px
@@ -2303,3 +2345,30 @@ background-color: #F05C6D
     }
     
 /* End homepage style */
+/* Start Survey Page Style */
+.survey-wrap .survyes{
+    margin-top: 0;
+    padding-top: 0;
+    background: #fff
+}
+.survey-wrap .survyes-container .nav-tabs{
+    justify-content: left;
+}
+.survey-wrap .dropdown{
+    margin-left: auto;
+    align-self: center
+}
+.survey-wrap .dropdown > .m-btn{
+    background: transparent;
+    border-color: #EDEDF7;
+    width: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+    height: auto;
+    color: #000
+}
+.survey-wrap .dropdown > .m-btn i{
+    color: #1BBAA2;
+    margin-right: 5px
+}
+/* End Survey Page Style */

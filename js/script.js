@@ -169,16 +169,31 @@ $(document).ready(function () {
         readURL(this);
     });
     // -- Select2 Init --
-    $(".m-select").select2({
-        width: '100%',
-        containerCssClass: "pf-select",
-        minimumResultsForSearch: -1
-    });
+    if ($('select').length) {
+        $(".m-select").select2({
+            width: '100%',
+            containerCssClass: "pf-select",
+            minimumResultsForSearch: -1
+        });
+    }
     //--Toast msg when copy--
     
     $('.code-cpy').click(function (e) {
         e.preventDefault();
         $('.cpy-toast').html('Copied!').fadeIn().delay(2000).fadeOut();
+    });
+
+    //-- Animate Numbers On Load --
+    $('.Count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 1000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
     });
     
 
