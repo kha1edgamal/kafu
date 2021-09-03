@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kafu | My Stats</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="imgs/logo.svg">
+    <!--Bootstrap Minified-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- 
+        -----Uncomment this for arabic version -----
+        <link rel="stylesheet" href="css/bootstrap-rtl.min.css"> -->
+
+    <!--FontAwesome Styles-->
+    <link rel="stylesheet" href="css/all.css">
+    <!--Animate.css-->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!--Scroll-->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!--Owl Carousel-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!--Main Style-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--For English-->
+    <!--<link rel="stylesheet" href="css/style-en.css">-->
+    <!--Media Style-->
+    <link rel="stylesheet" href="css/media.css">
+    <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+    <![endif]-->
+   
+</head>
+
+<body class="preload">
+    <!--Start Preloader Section-->
+    <div class="screen">
+        <div class="loader">
+            <!--Preloader HTML-->
+        </div>
+    </div>
+    <!--End Preloader Section-->
+    <!-- Start Header Section -->
+    <!-- 
+        Add 'logged' class to header to make it logged in header 
+        And without 'logged' class for guests
+     -->
+     <header class="">
+        <div class="container-fluid">
+            <div class="d-flex">
+                <div class="logo-nav d-flex">
+                    <div class="logo">
+                        <img src="imgs/logo.svg" alt="">
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="active">
+                                <a href="index.html">home</a>
+                            </li>
+                            <li>
+                                <a href="#">about</a>
+                            </li>
+                            <li>
+                                <a href="survey.html">survey</a>
+                            </li>
+                            <li>
+                                <a href="#">services</a>
+                            </li>
+                            <li>
+                                <a href="#">partners</a>
+                            </li>
+                            <li>
+                                <a href="#">contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Start Before Sign-In Menu -->
+                <div class="bf-sign">
+                    <div class="in-out">
+                        <a href="#" data-toggle="modal" data-target="#signUpModal"><i class="fas fa-lock"></i>join us</a>
+                        <a href="#" data-toggle="modal" data-target="#signInModal"><i class="fas fa-user"></i>sign in</a>
+                    </div>
+                    <div class="lang">
+                        <a href="#">AR</a>
+                    </div>
+                </div>
+                <!-- End Before Sign-In Menu -->
+
+                <!-- Start After Sign-In Menu -->
+                <div class="af-sign">
+                    <div class="profile-info">
+                        <div class="user-img">
+                            <img src="imgs/default-user.png" alt="">
+                            <div class="pf-progress">
+                                <svg class="progress-ring" width="120" height="120">
+                                    <circle class="progress-ring__circle" stroke="#FF9054" stroke-width="4" fill="transparent" r="52" cx="60" cy="60" />
+                                </svg>
+
+                            </div>
+                            <!-- Put progress percentage in value attribute -->
+                            <input value="85" type="hidden" >
+                        </div>
+                        <div class="user-info">
+                            <h5>User Name</h5>
+                            <h6>
+                                <span><img src="imgs/wallet-icon.svg" alt=""></span>
+                                500pts
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <ul class="main-ul">
+                            <li class="has-child">
+                                <a href="#"><i class="fas fa-search"></i></a>
+                                <div class="search-inp s-menu">
+                                    <input type="search" placeholder="Search...">
+                                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                                </div>
+                            </li>
+                            <li class="has-child">
+                                <a href="#"><i class="fas fa-cog"></i></a>
+                                <div class="settings  s-menu">
+                                    <a href="profile.html">My Account</a>
+                                    <a href="terms-condition.html">Terms & Condition</a>
+                                    <a href="privacy-policy.html">Privacy Policy</a>
+                                    <a href="#" data-toggle="modal" data-target="#forgetPassword">Forget Password</a>
+                                    <a href="#">Logout</a>
+                                </div>
+                            </li>
+                            <li class="has-child">
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <div class="settings langs s-menu">
+                                    <a href="#">عربي</a>
+                                    <a href="#">English</a>
+                                </div>
+                            </li>
+                            <li class="has-child">
+                                <a href="#">
+                                    <i class="fas fa-bell"></i>
+                                    <b>4</b>
+                                </a>
+                                <div class="s-menu notifications">
+                                    <!-- Add class new for unread notificaion -->
+                                    <a href="#" class="d-flex new">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="d-flex new">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="d-flex">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="d-flex">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="view-all">View All</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End After Sign-In Menu -->
+            </div>
+        </div>
+    </header>
+    <!-- End Header Section -->
+    <!-- Start  Modals Section -->
+  <!-- Login Modal -->
+    <div class="modal fade solid login" id="signInModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="imgs/times-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="s-input">
+                            <input type="text" placeholder="Mobile/Email">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="s-input">
+                            <input type="password" placeholder="Enter Password">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="s-input checkbox">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">
+                                Remember Me
+                            </label>
+
+                        </div>
+                        <button class="m-btn m-btn-green w-100">sign in</button>
+                        <div class="d-flex">
+                            <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signUpModal">New Account</a>
+                            <a href="#"  data-dismiss="modal" data-toggle="modal" data-target="#forgetPassword">Forget Password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign Up Modal -->
+    <div class="modal fade solid sign-up" id="signUpModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">New Account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="imgs/times-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!-- Add 'invalid' class to 's-input' to make it invalid -->
+                                <div class="s-input invalid">
+                                    <input type="text" placeholder="Your Email*">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="invalid-icon">
+                                        <i class="fas fa-exclamation"></i>
+                                    </div>
+                                </div>
+                                <div class="s-input">
+                                    <input type="password" placeholder="Enter Password*">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="s-input">
+                                    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Your Mobile*">
+                                    <i class="fas fa-mobile"></i>
+                                </div>
+                                <div class="s-input">
+                                    <input type="password" placeholder="Re Enter Password*">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="s-input ref-code">
+                            <div class="d-flex">
+                                <p>you have a invitation code from you friend (optional)</p>
+                                <span><b>+300</b>Point</span>
+                            </div>
+                            <input type="text"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Referal Code">
+                            <i class="fas fa-user-tag"></i>
+                            <a href="#" class="send-btn">Send</a>
+
+                        </div>
+                         <div class="g-recaptcha"
+       data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+                        <button data-dismiss="modal" data-toggle="modal" data-target="#welcome" class="m-btn m-btn-green ">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forget Password Modal -->
+    <div class="modal fade solid " id="forgetPassword" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Forget Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="imgs/times-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="s-input">
+                            <input type="text" placeholder="Mobile/Email">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <button class="m-btn m-btn-green w-100">send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div class="modal fade solid welcome " id="welcome" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <img src="imgs/welcome-img.png" alt="">
+                        <h1>welcome
+                            <span>to kafu survey</span>
+                        </h1>
+                        <p>
+                            "Complete your profile to get free <b>300</b> points for sign up."
+                        </p>
+                        <a href="profile.html" class="m-btn m-btn-green">complite your profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Modals Section -->
+    <!-- Start Wrapper -->
+    <div class="wrapper home-wrap my-stats-wrap">
+        
+        <!-- Start Main -->
+        <main>
+            <div class="pg-head">
+                <div class="container-fluid">
+                    <div class="d-flex">
+                        <div>
+                            <h1 class="title">My stats</h1>
+                            <div class="kf-breadcrumb">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">My Stats</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Start My Stats Section -->
+            <section class="my-stats">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="stats">
+                                <div class="d-flex">
+                                    <div>
+                                        <div class="icon">
+                                            <b class="Count">14</b>
+                                            
+                                        </div>
+                                        <h5>My Surveys</h5>
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur </h6>
+                                    </div>
+                                    <div>
+                                        <div class="icon">
+                                            <b class="Count">680</b>
+                                        </div>
+                                        <h5>Answers</h5>
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur </h6>
+                                    </div>
+                                    <div>
+                                        <div class="icon">
+                                            <b class="Count">55887</b>
+                                           
+                                        </div>
+                                        <h5>Spending Points</h5>
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur </h6>
+                                    </div>
+                                    <div>
+                                        <div class="icon">
+                                            <b class="Count">1200</b>
+                                            
+                                        </div>
+                                        <h5>Free Points</h5>
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur </h6>
+                                    </div>
+                                    <div>
+                                        <div class="icon">
+                                            <b class="Count">2</b>
+                                            
+                                        </div>
+                                        <h5>Referrals</h5>
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur </h6>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="web-mob">
+                                <div class="box">
+                                    <h3>Gender</h3>
+                                    <ul>
+                                        <li>
+                                            <h4>Male</h4>
+                                            <div>
+                                                <div class="m-progress" style="width:30%;background:#CE93D8;">
+                                                    <span class="num count">30%</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h4>Female</h4>
+                                            <div>
+                                                <div class="m-progress" style="width:70%;background:#9FA8DA;" >
+                                                    <span class="num">70%</span>
+                                                </div>
+                                            </div>
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box">
+                                    <h3>Channel</h3>
+                                    <ul>
+                                        <li>
+                                            <h4>Web</h4>
+                                            <div>
+                                                <div class="m-progress" style="width:30%;background:#CE93D8;">
+                                                    <span class="num">30%</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h4>Mobile</h4>
+                                            <div>
+                                                <div class="m-progress" style="width:70%;background:#9FA8DA;" >
+                                                    <span class="num">70%</span>
+                                                </div>
+                                            </div>
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box">
+                                    <h3>Country</h3>
+                                    <ul>
+                                        <li>
+                                            <h4>Algeria</h4>
+                                            <div>
+                                                <div class="m-progress" style="width:100%;background:#CE93D8;">
+                                                    <span class="num">5780</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h4>Bahrin</h4>
+                                            <div>
+                                                <div class="m-progress" style="width:90%;background:#9FA8DA;">
+                                                    <span class="num">5211</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h4>Egypt</h4>
+                                            <div>
+                                                <div class="m-progress" style="width:80%;background:#81D4FA;">
+                                                    <span class="num">3588</span>
+                                                </div>
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <h4>Iraq</h4>
+                                            <div>
+                                                <div class="m-progress" style="width:70%;background-color: #80CBC4;">
+                                                    <span class="num">2447</span>
+                                                </div>
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <h4>Jordan</h4>
+                                            <div>
+                                                <div class="m-progress" style="width:60%;background: #FFF59D;">
+                                                    <span class="num">1692</span>
+                                                </div>
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <h4>Kuwait</h4>
+                                            <div>
+                                                <div class="m-progress" style="width:50%;background: #FFCC80;">
+                                                    <span class="num">901</span>
+                                                </div>
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <h4>Lebia</h4>
+                                            <div>
+                                                <div class="m-progress" style="width:40%;background: #BCAAA4;">
+                                                    <span class="num">577</span>
+                                                </div>
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <h4>Qatar</h4>
+                                            <div>
+                                                <div class="m-progress" style="width:30%;background: #B0BEC5;">
+                                                    <span class="num">14</span>
+                                                </div>
+                                            </div>
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="box">
+                                    <h3>Answers</h3>
+                                    <div class="chart-container">
+                                        <canvas id="answers" width="100%" height="100%"></canvas>
+                                    </div>
+                            </div>
+                            <div class="box" >
+                                <h3>Contacts</h3>
+                                <div class="chart-container donught-chart"> 
+                                    <div id="legend"></div>
+                                    <canvas id="contacts" width="100%" height="100%"></canvas>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="box" >
+                                <div class="chart-container"> 
+                                    <canvas id="bar-chart" width="100%" height="100%"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="box" >
+                                <div class="chart-container"> 
+                                    <canvas id="line-chart" width="100%" height="100%"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-report">
+                        <div>
+                            <h2>Download Basic Report</h2>
+                            <a href="#">Download EXCEL File<i class="fas fa-download"></i></a>
+                            <a href="#">Download PDF File<i class="fas fa-download"></i></a>
+                        </div>
+                        <div>
+                            <h2>Download Full Report</h2>
+                            <a href="#">Download EXCEL File<i class="fas fa-download"></i></a>
+                            <a href="#">Download PDF File<i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End My Stats Section -->
+        </main>
+        <!-- End Main -->
+    </div>
+    <!-- End wrapper -->
+    <!-- Start footer section -->
+    <footer>
+        <div class="cpy">
+            © 2021 - Kafu all rights reserved.
+        </div>
+        <div class="social">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+
+    </footer>
+    <!-- End footer section -->
+    <div class="customer-support">
+        <a href="#" data-toggle="tooltip" data-placement="bottom"
+        title="" data-original-title="Have a question?"
+        >
+            <span>
+                <img src="imgs/customer-service-agent.svg" alt="">
+            </span>
+    </a>
+    </div>
+    
+
+    <!--Jquery Minified JS-->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!--Owl Carousel JS-->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <!--Bootstrap Minified JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+       <script> function registerFormCheck(){} </script>
+   <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="js/recaptcha.js"></script>
+    <!-- Charts Js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+    <!--ScrollBar-->
+    <script src="js/jquery.smoothscroll.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--Main Script-->
+    <script src="js/script.js"></script>
+
+    <script>
+        var config = {
+		type: 'line',
+		data: {
+			labels: ['Survey1', 'Survey2', 'Survey3', 'Survey4', 'Survey5'],
+			datasets: [{
+				label: 'Mobile',
+				backgroundColor: '#9FA8DA',
+				borderColor: '#9FA8DA',
+				fill: false,
+				data: [
+					3200,
+					2300,
+					4100,
+					4000,
+					5900
+				],
+			}, {
+				label: 'Web',
+				backgroundColor: '#CE93D8',
+				borderColor:'#CE93D8',
+				fill: false,
+				data: [
+					1000,
+					1500,
+					3500,
+					2800,
+					4200,
+				],
+		
+			}]
+		},
+		options: {
+            responsive: true,
+            maintainAspectRatio: false,
+}
+	};
+    $(document).ready(function(){
+        var ctx = document.getElementById('answers').getContext('2d');
+		window.myLine = new Chart(ctx, config);
+
+        createChart('contacts', myChartData);
+        createChart('bar-chart', barChart);
+        createChart('line-chart', lineChart);
+        
+       
+    }) //End document.ready
+    
+   //Contacts Chart
+        const myChartData = {
+    type: 'doughnut',
+    data: {
+        labels: ["Kafu Network", "Promote", "Free"],
+        datasets: [{
+            label: "Test",
+            data: [60, 30, 10],
+            backgroundColor: [
+                '#CE93D8',
+                '#81D4FA',
+                '#343456',
+            ],
+            hoverOffset: 4
+        }]
+    },
+    options: {
+      
+				title: {
+					display: true,
+					text: "This is your 401(k) account's current asset mix"
+				},
+      animation: {
+					animateScale: true,
+					animateRotate: true
+				},
+                responsive: true,
+            maintainAspectRatio: false,
+      
+            plugins: {
+    legend: {
+      position:'left'
+    }
+  }
+      
+    }
+};
+//bar chart
+const barChart = {
+    type: 'bar',
+    data: {
+        labels: ["2017", "2018", "2019","2020","2021"],
+    datasets: [
+        {
+            label: "Kafu Network",
+            backgroundColor: "#CE93D8",
+            data: [380,320,370,520,590]
+        },
+        {
+            label: "Promote",
+            backgroundColor: "#9FA8DA",
+            data: [220,410,400,450,700]
+        },
+        {
+            label: "Free",
+            backgroundColor: "#81D4FA",
+            data: [300,190,240,340,400]
+        }
+    ]
+    },
+    options: {
+        responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+        display: false
+    },
+    tooltips: {
+        callbacks: {
+           label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+           }
+        }
+    }
+    }
+}
+ // line chart
+
+ const lineChart = {
+    type: 'line',
+  data: {
+    labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+    
+    datasets: [{
+        
+    label: 'Users',
+    lineTension: 0.4,
+    data: [65, 59, 80, 81, 56, 55, 40],
+    fill: true,
+    backgroundColor:'#CE93D8',
+    borderColor: '#CE93D8',
+    tension: 0.1
+  }]
+  },
+  options: {
+        responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+    legend: {
+      display: false
+    }
+  }
+    }
+ }
+
+function createChart(chartId, chartData) {
+    const ctx = document.getElementById(chartId);
+    const myChart = new Chart(ctx, {
+      type: chartData.type,
+      data: chartData.data,
+      options: chartData.options,
+    });
+  };
+    </script>
+    
+
+</body>
+
+</html>

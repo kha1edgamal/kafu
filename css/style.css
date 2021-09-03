@@ -1153,15 +1153,20 @@ header .af-sign .notifications .view-all:hover{
     justify-content: space-between;
     align-items: center;
 }
-.survey-card .poll-card .vote .d-flex li {
+.survey-card .poll-card .vote .d-flex li,
+.personal-account-wrap .bottom .details ul li {
     display: inline-block;
     color: #7A7A7D
     
 }
-.survey-card .poll-card .vote .d-flex li:not(:last-child){
+.survey-card .poll-card .vote .d-flex li:not(:last-child),
+.personal-account-wrap .bottom .details ul li:not(:last-child)
+{
     margin-right: 10px
 }
-.survey-card .poll-card .vote .d-flex li i {
+.survey-card .poll-card .vote .d-flex li i,
+.personal-account-wrap .bottom .details ul li i
+ {
     color: #343456;
     font-size: 11px;
     vertical-align: baseline;
@@ -1711,13 +1716,16 @@ footer .social ul li:hover a i {
 
 /* End Modals Style */
 /* Start Profile Page Style */
-.profile-wrap .pg-head .complete-text{
+.profile-wrap .pg-head .complete-text,
+.personal-account-wrap .complete-text{
     width:300px;
     height: 27px;
     display: flex;
     align-items: center;
 }
-.profile-wrap .pg-head .complete-text span{
+.profile-wrap .pg-head .complete-text span,
+.personal-account-wrap .complete-text span
+{
     display: block;
     width: 100%;
     background-image: linear-gradient(to right, #FFAE3B , #FF716F);
@@ -2028,7 +2036,8 @@ footer .social ul li:hover a i {
     border: 1px dashed #343456;
     border-radius: 20px;
 }
-.home-wrap .my-stats .web-mob .box h3{
+.home-wrap .my-stats .web-mob .box h3,
+.my-stats-wrap .box > h3{
     font-size: 15px;
     color: #343456;
     margin-bottom: 10px;
@@ -3275,3 +3284,382 @@ background-color: #F05C6D
       color: #343456
   }
 /* End Survey Options Styles */
+/* Start My Stats Style */
+.my-stats-wrap .my-stats{
+    background-image: unset;
+    padding: 0;
+}
+.my-stats-wrap .my-stats .stats h6 {
+    font-size: 12px;
+    margin-top: 8px;
+    line-height:20px;
+    color:#7A7A7D;
+    text-align: center;
+    padding:0 20px;
+}
+.my-stats-wrap .my-stats .stats .d-flex{
+    margin: 60px 0;
+}
+.my-stats-wrap .my-stats .web-mob .box{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.my-stats-wrap .my-stats .web-mob{
+    display: block;
+}
+.my-stats-wrap .my-stats .web-mob .box h4{
+    width: 10%;
+}
+.my-stats-wrap .my-stats .web-mob .box li > div{
+    width: 90%
+}
+.my-stats-wrap .my-stats .web-mob .box li:nth-child(1) .m-progress,
+.my-stats-wrap .my-stats .web-mob .box li:nth-child(2) .m-progress{
+    background-image: none;
+}
+.my-stats-wrap .download-report > div {
+    margin-bottom: 30px;
+}
+.my-stats-wrap .download-report h2{
+    font-family: noto-bd;
+    font-size:20px;
+    margin-bottom: 10px;
+    color: #343456;
+}
+.my-stats-wrap .download-report a {
+    background-color: #EDEDF7;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #343456;
+    font-size: 13px;
+    transition: all .3s;
+
+}
+.my-stats-wrap .download-report a:hover{
+    opacity: .7;
+    transition: all .3s;
+}
+.my-stats-wrap .download-report > div a:first-of-type{
+    margin-right: 15px;
+}
+.my-stats-wrap .download-report a i {
+    margin: 0 5px;
+    vertical-align: baseline;
+}
+.my-stats-wrap .chart-container{
+    padding: 20px 55px 20px 20px;
+    border: 1px dashed #343456;
+    border-radius: 20px;
+    height:253px;
+    position: relative;
+    margin-bottom: 30px
+}
+.my-stats-wrap .chart-container canvas{
+    height: 100% !important;
+    width: 100% !important
+}
+.my-stats-wrap .chart-container.donught-chart{
+    height:306px
+}
+
+/* End My Stats Style */
+/* Start Personal Account Style */
+.personal-account-wrap .personal-container {
+    padding: 40px 0;
+    background-color: #343456;
+}
+.personal-account-wrap .personal-container .d-flex{
+    align-items: center;
+}
+.personal-account-wrap .avatar-upload .avatar-preview{
+    width:130px;
+    height:130px;
+}
+.personal-account-wrap .my-stats .stats .d-flex{
+    margin: 0;
+}
+.personal-account-wrap .my-stats .stats .d-flex h5{
+    color: #fff
+}
+.personal-account-wrap .avatar-upload{
+    margin-bottom: 0;
+}
+.personal-account-wrap .personal-container .p-text{
+    margin-left: 10px;
+}
+.personal-account-wrap .personal-container .p-text h2 {
+    font-family: noto-bd;
+    color: #fff;
+}
+.personal-account-wrap .personal-container .p-text h2 span{
+    display: block;
+    color: #9A9AAB;
+    margin-bottom: 15px;
+}
+.personal-account-wrap .info-tabs {
+    background-color: #F7F7FC;
+    padding: 20px 0;
+}
+.personal-account-wrap .info-tabs .nav-tabs {
+    border-bottom: 0;
+}
+.personal-account-wrap .info-tabs .nav-tabs li:not(:last-child){
+    margin-right: 25px;
+}
+.personal-account-wrap .info-tabs .nav-tabs li  i {
+    color: #9494A8;
+    margin-right:5px;
+    vertical-align: baseline;
+    transition: all .3s;
+}
+.personal-account-wrap .info-tabs .nav-tabs li a {
+    color: #9494A8;
+    font-family: noto-bd;
+    transition: all .3s;
+}
+.personal-account-wrap .info-tabs .nav-tabs li a.active.show {
+    color: #343456;
+    transition: all .3s;
+}
+.personal-account-wrap .info-tabs .nav-tabs li a.active.show i {
+    color: #1BBAA2;
+    transition: all .3s;
+}
+.select2-container ~ .select2-container{
+    display: none;
+}
+.personal-account-wrap .survey-card .timer .m-btn{
+    background-color: #F05C6D;
+}
+.personal-account-wrap .survey-card .timer .m-btn:hover{
+    background-color: transparent;
+    border-color: #F05C6D;
+    color: #F05C6D;
+}
+.personal-account-wrap .survey-card  .bottom{
+    background: #F7F7FC;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.personal-account-wrap .btns-sec{
+    justify-content: space-between;
+}
+.personal-account-wrap .btns-sec .delete-acc {
+    color: #9898A9;
+    transition: all .3s;
+}
+.personal-account-wrap .btns-sec .delete-acc:hover{
+    text-decoration: underline;
+}
+.personal-account-wrap .btns-sec .delete-acc i {
+    color: #9898A9;
+    vertical-align: baseline;
+    margin-right: 5px;
+}
+.personal-account-wrap .wallet-balance .head{
+    padding: 15px 20px;
+    background-image: linear-gradient(to right, #FFAE3B , #FF716F);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    color: #fff;
+    font-family: noto-bd;
+}
+.personal-account-wrap .wallet-balance .head i {
+    margin-right: 5px;
+}
+.personal-account-wrap .wallet-balance{
+border-radius:  30px;
+    background: #343456;
+}
+.personal-account-wrap .wallet-balance .d-flex{
+    padding: 38px 20px 20px 20px;
+    color: #fff;
+    align-items: center;
+}
+.personal-account-wrap .wallet-balance .d-flex h6{
+    color: #9A9AAB;
+    margin-bottom: 3px;
+}
+.personal-account-wrap .wallet-balance .d-flex .w-pts{
+    padding-left: 50px;
+    margin-left: 50px;
+    border-left: 1px solid #5D5D78;
+}
+.personal-account-wrap .wallet-balance .d-flex p{
+    text-transform: uppercase;
+
+}
+.personal-account-wrap .wallet-balance .d-flex p b{
+    color: #1BBAA2;
+    vertical-align: baseline;
+    margin-right:5px;
+    font-size:18px;
+}
+.personal-account-wrap .wallet-balance .d-flex .w-pts p b {
+    color: #FF9254;
+}
+.personal-account-wrap .transfer{
+    background: #F7F7FC;
+    padding: 20px;
+    border-radius: 30px;
+}
+.personal-account-wrap .transfer h1{
+    font-size: 20px;
+    font-family: 'noto-bd';
+    color: #343456;
+}
+.personal-account-wrap .transfer p{
+    color: #343456;
+    font-size: 12px;
+}
+.personal-account-wrap .transfer .d-flex{
+    margin-top: 30px;
+
+}
+.personal-account-wrap .transfer .d-flex form{
+    display: flex;
+    align-items: center;
+}
+.personal-account-wrap .transfer .d-flex form .-input{
+    margin:0;
+}
+.personal-account-wrap .transfer .d-flex form .-input input{
+    padding: 0 20px;
+    width: 120px;
+    font-family: noto-bd;
+    color: #9898A9;
+}
+.personal-account-wrap .transfer .d-flex form .-input span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    color: #7E7E7E;
+}
+.personal-account-wrap .transfer .d-flex form h4{
+    margin-left: 10px;
+    font-size: 16px;
+    font-family: 'noto-bd';
+    color: #343456;
+}
+.personal-account-wrap .transfer .d-flex form h4 b {
+    vertical-align: baseline;
+    color: #FF9254;
+    font-size: 20px;
+    margin-right: 5px;
+}
+.personal-account-wrap .transfer .m-btn-gradient{
+    width: auto;
+    padding: 0 20px;
+    font-size:16px;
+}
+.personal-account-wrap .recharge{
+    background: #F7F7FC;
+    border-radius: 30px
+}
+.personal-account-wrap .recharge .pic {
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-top:auto;
+}
+.personal-account-wrap .recharge .pic img{
+    width:150px;
+}
+.personal-account-wrap .recharge .text{
+    margin: auto;
+    padding: 0 20px;
+}
+.personal-account-wrap .recharge .text h1{
+    font-size: 20px;
+    font-family: 'noto-bd';
+    color: #343456;
+}
+.personal-account-wrap .recharge .text p{
+    color: #343456;
+    font-size: 12px;
+    text-align: center;
+}
+.personal-account-wrap .recharge .text .m-btn{
+    width: auto;
+    margin-top: 20px;
+}
+.personal-account-wrap .recharge,
+.personal-account-wrap .wallet-balance ,
+.personal-account-wrap .transfer{
+    height:170px;
+}
+.personal-account-wrap .historical-trans .download-report h1 {
+    font-family: noto-bd;
+    color: #343456;
+    font-size:20px
+}
+.personal-account-wrap .historical-trans .download-report h1 i {
+    color: #D6D6DD;
+    vertical-align: baseline;
+    font-size:20px
+}
+.personal-account-wrap .download-report > div{
+    margin: auto 0;
+}
+.personal-account-wrap .h-table {
+    margin-top:20px;
+    margin-bottom:40px;
+}
+.personal-account-wrap .h-table .h-row {
+    background-color: #F7F7FC;
+    border-radius: 30px;
+    padding:20px 40px;
+    border: 1px solid #EDEDF7;
+}
+.personal-account-wrap .h-table .h-row:nth-last-of-type(odd){
+    background-color:#fff;
+}
+.personal-account-wrap .h-table .h-row:not(:last-of-type){
+    margin-bottom: 20px;
+}
+.personal-account-wrap .h-table .h-row i{
+    font-size:40px;
+    margin-right: 40px;
+    width:34px;
+}
+.personal-account-wrap .h-table .h-row i.fa-long-arrow-alt-down{
+    color:#1BBAA2
+}
+.personal-account-wrap .h-table .h-row i.fa-long-arrow-alt-up{
+    color:#F05C6D
+}
+.personal-account-wrap .h-table .h-row i.fa-long-arrow-alt-right{
+    color:#FF9254
+}
+.personal-account-wrap .h-table .h-row h6{
+    color: #9494A8;
+    font-size:16px;
+}
+.personal-account-wrap .h-table .h-row h6 b{
+    color :#343456;
+    display:block;
+    font-size:18px;
+    font-family: noto-bd;
+}
+.personal-account-wrap .h-table .h-row h6 span{
+    color :#343456;
+    font-size:18px;
+    display: block;
+}
+ .modal.recharge .modal-title{
+    font-family: noto-bd;
+    text-align: center;
+}
+ .modal.recharge h5 span{
+    display:block;
+    text-align: center;
+    color: #7F7F7F;
+}
+.modal.recharge form h6 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.modal.recharge form .s-input input:not(input[type='checkbox']){
+    padding: 20px
+}
+/* End Personal Account Style */
