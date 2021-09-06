@@ -3683,3 +3683,70 @@ border-radius:  30px;
     padding: 20px
 }
 /* End Personal Account Style */
+/* Start Privacy Policy Style */
+.privacy-terms-wrap .-container{
+    margin:50px 0;
+}
+.privacy-terms-wrap .-container img{
+    width:100%;
+    height:100%
+}
+.privacy-terms-wrap .-container p {
+    font-size:15px;
+    line-height:25px;
+
+}
+.privacy-terms-wrap .-container p b {
+    display:block;
+    font-size:15px;
+    margin-bottom:5px;
+}
+
+/* End Privacy Policy Style */
+/* Start Notifications Style */
+.notifications-wrap .notifications{
+    margin: 50px 0;
+}
+.notifications-wrap .notifications ul li:not(:last-child){
+    margin-bottom: 30px
+}
+.notifications-wrap .notifications ul li.new a{
+    background-color: #F7F7FC;
+}
+.notifications-wrap .notifications ul li a {
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid #EDEDF7;
+    transition: all .3s;
+}
+.notifications-wrap .notifications ul li:hover a {
+    transform: scale(.98);
+    transition: all .3s;
+}
+.notifications-wrap .notifications ul li a p b {
+    vertical-align: baseline;
+    font-size:16px;
+}
+.notifications-wrap .notifications ul li a p span{
+    display: block;
+    font-size:13px;
+    color: #7E7E7E
+}
+.notifications-wrap .notifications ul li .d-flex{
+    align-items: center;
+}
+.notifications-wrap .notifications ul li a p {
+    font-size:16px;
+}
+.notifications-wrap .notifications ul li img{
+    width:69px;
+    height:69px;
+    object-fit: contain;
+    margin-right:20px;
+    background-color: #fff;
+    border: 1px solid #EDEDF7;
+    border-radius: 50%;
+    padding: 10px
+}
+/* End Notifications Style */

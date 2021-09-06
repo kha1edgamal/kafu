@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kafu | Notifications</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="imgs/logo.svg">
+    <!--Bootstrap Minified-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- 
+        -----Uncomment this for arabic version -----
+        <link rel="stylesheet" href="css/bootstrap-rtl.min.css"> -->
+
+    <!--FontAwesome Styles-->
+    <link rel="stylesheet" href="css/all.css">
+    <!--Animate.css-->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!--Scroll-->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!--Owl Carousel-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!--Main Style-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--For English-->
+    <!--<link rel="stylesheet" href="css/style-en.css">-->
+    <!--Media Style-->
+    <link rel="stylesheet" href="css/media.css">
+    <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+    <![endif]-->
+   
+</head>
+
+<body class="preload">
+    <!--Start Preloader Section-->
+    <div class="screen">
+        <div class="loader">
+            <!--Preloader HTML-->
+        </div>
+    </div>
+    <!--End Preloader Section-->
+    <!-- Start Header Section -->
+    <!-- 
+        Add 'logged' class to header to make it logged in header 
+        And without 'logged' class for guests
+     -->
+     <header class="">
+        <div class="container-fluid">
+            <div class="d-flex">
+                <div class="logo-nav d-flex">
+                    <div class="logo">
+                        <img src="imgs/logo.svg" alt="">
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="active">
+                                <a href="index.html">home</a>
+                            </li>
+                            <li>
+                                <a href="#">about</a>
+                            </li>
+                            <li>
+                                <a href="survey.html">survey</a>
+                            </li>
+                            <li>
+                                <a href="#">services</a>
+                            </li>
+                            <li>
+                                <a href="#">partners</a>
+                            </li>
+                            <li>
+                                <a href="#">contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Start Before Sign-In Menu -->
+                <div class="bf-sign">
+                    <div class="in-out">
+                        <a href="#" data-toggle="modal" data-target="#signUpModal"><i class="fas fa-lock"></i>join us</a>
+                        <a href="#" data-toggle="modal" data-target="#signInModal"><i class="fas fa-user"></i>sign in</a>
+                    </div>
+                    <div class="lang">
+                        <a href="#">AR</a>
+                    </div>
+                </div>
+                <!-- End Before Sign-In Menu -->
+
+                <!-- Start After Sign-In Menu -->
+                <div class="af-sign">
+                    <div class="profile-info">
+                        <div class="user-img">
+                            <img src="imgs/default-user.png" alt="">
+                            <div class="pf-progress">
+                                <svg class="progress-ring" width="120" height="120">
+                                    <circle class="progress-ring__circle" stroke="#FF9054" stroke-width="4" fill="transparent" r="52" cx="60" cy="60" />
+                                </svg>
+
+                            </div>
+                            <!-- Put progress percentage in value attribute -->
+                            <input value="85" type="hidden" >
+                        </div>
+                        <div class="user-info">
+                            <h5>User Name</h5>
+                            <h6>
+                                <span><img src="imgs/wallet-icon.svg" alt=""></span>
+                                500pts
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <ul class="main-ul">
+                            <li class="has-child">
+                                <a href="#"><i class="fas fa-search"></i></a>
+                                <div class="search-inp s-menu">
+                                    <input type="search" placeholder="Search...">
+                                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                                </div>
+                            </li>
+                            <li class="has-child">
+                                <a href="#"><i class="fas fa-cog"></i></a>
+                                <div class="settings  s-menu">
+                                    <a href="profile.html">My Account</a>
+                                    <a href="terms-condition.html">Terms & Condition</a>
+                                    <a href="privacy-policy.html">Privacy Policy</a>
+                                    <a href="#" data-toggle="modal" data-target="#forgetPassword">Forget Password</a>
+                                    <a href="#">Logout</a>
+                                </div>
+                            </li>
+                            <li class="has-child">
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <div class="settings langs s-menu">
+                                    <a href="#">عربي</a>
+                                    <a href="#">English</a>
+                                </div>
+                            </li>
+                            <li class="has-child">
+                                <a href="#">
+                                    <i class="fas fa-bell"></i>
+                                    <b>4</b>
+                                </a>
+                                <div class="s-menu notifications">
+                                    <!-- Add class new for unread notificaion -->
+                                    <a href="#" class="d-flex new">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="d-flex new">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="d-flex">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="d-flex">
+                                        <div class="logo">
+                                            <img src="imgs/logo.svg" alt="">
+                                        </div>
+                                        <p>
+                                            <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" class="view-all">View All</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End After Sign-In Menu -->
+            </div>
+        </div>
+    </header>
+    <!-- End Header Section -->
+    <!-- Start  Modals Section -->
+  <!-- Login Modal -->
+    <div class="modal fade solid login" id="signInModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="imgs/times-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="s-input">
+                            <input type="text" placeholder="Mobile/Email">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="s-input">
+                            <input type="password" placeholder="Enter Password">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="s-input checkbox">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">
+                                Remember Me
+                            </label>
+
+                        </div>
+                        <button class="m-btn m-btn-green w-100">sign in</button>
+                        <div class="d-flex">
+                            <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signUpModal">New Account</a>
+                            <a href="#"  data-dismiss="modal" data-toggle="modal" data-target="#forgetPassword">Forget Password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign Up Modal -->
+    <div class="modal fade solid sign-up" id="signUpModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">New Account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="imgs/times-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!-- Add 'invalid' class to 's-input' to make it invalid -->
+                                <div class="s-input invalid">
+                                    <input type="text" placeholder="Your Email*">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="invalid-icon">
+                                        <i class="fas fa-exclamation"></i>
+                                    </div>
+                                </div>
+                                <div class="s-input">
+                                    <input type="password" placeholder="Enter Password*">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="s-input">
+                                    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Your Mobile*">
+                                    <i class="fas fa-mobile"></i>
+                                </div>
+                                <div class="s-input">
+                                    <input type="password" placeholder="Re Enter Password*">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="s-input ref-code">
+                            <div class="d-flex">
+                                <p>you have a invitation code from you friend (optional)</p>
+                                <span><b>+300</b>Point</span>
+                            </div>
+                            <input type="text"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Referal Code">
+                            <i class="fas fa-user-tag"></i>
+                            <a href="#" class="send-btn">Send</a>
+
+                        </div>
+                         <div class="g-recaptcha"
+       data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
+                        <button data-dismiss="modal" data-toggle="modal" data-target="#welcome" class="m-btn m-btn-green ">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forget Password Modal -->
+    <div class="modal fade solid " id="forgetPassword" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Forget Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="imgs/times-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="s-input">
+                            <input type="text" placeholder="Mobile/Email">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <button class="m-btn m-btn-green w-100">send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div class="modal fade solid welcome " id="welcome" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <img src="imgs/welcome-img.png" alt="">
+                        <h1>welcome
+                            <span>to kafu survey</span>
+                        </h1>
+                        <p>
+                            "Complete your profile to get free <b>300</b> points for sign up."
+                        </p>
+                        <a href="profile.html" class="m-btn m-btn-green">complite your profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Modals Section -->
+    <!-- Start Wrapper -->
+    <div class="wrapper notifications-wrap">
+        
+        <!-- Start Main -->
+        <main>
+            <div class="pg-head">
+                <div class="container-fluid">
+                    <div class="d-flex">
+                        <div>
+                            <h1 class="title">Notifications</h1>
+                            <div class="kf-breadcrumb">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Notifications</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+            </div>
+           <section class="notifications">
+               <div class="container-fluid">
+                   <div class="row">
+                       <div class="col-sm-12">
+                           <ul>
+                               <li class="new">
+                                   <a href="#" class="d-flex">
+                                       <img src="imgs/logo.svg" alt="">
+                                       <p>
+                                           <b>Kafu App </b>Please Complete your Profile to get free 500 Point
+                                            <span>57 minutes ago</span>
+                                        </p>
+                                   </a>
+                               </li>
+                               <li class="new">
+                                <a href="#" class="d-flex">
+                                    <img src="imgs/logo.svg" alt="">
+                                    <p>
+                                        <b>Kafu App </b>Please Complete your Profile to get free 500 Point
+                                         <span>57 minutes ago</span>
+                                     </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <img src="imgs/logo.svg" alt="">
+                                    <p>
+                                        <b>Kafu App </b>Please Complete your Profile to get free 500 Point
+                                         <span>57 minutes ago</span>
+                                     </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <img src="imgs/logo.svg" alt="">
+                                    <p>
+                                        <b>Kafu App </b>Please Complete your Profile to get free 500 Point
+                                         <span>57 minutes ago</span>
+                                     </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <img src="imgs/logo.svg" alt="">
+                                    <p>
+                                        <b>Kafu App </b>Please Complete your Profile to get free 500 Point
+                                         <span>57 minutes ago</span>
+                                     </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <img src="imgs/logo.svg" alt="">
+                                    <p>
+                                        <b>Kafu App </b>Please Complete your Profile to get free 500 Point
+                                         <span>57 minutes ago</span>
+                                     </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <img src="imgs/logo.svg" alt="">
+                                    <p>
+                                        <b>Kafu App </b>Please Complete your Profile to get free 500 Point
+                                         <span>57 minutes ago</span>
+                                     </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <img src="imgs/logo.svg" alt="">
+                                    <p>
+                                        <b>Kafu App </b>Please Complete your Profile to get free 500 Point
+                                         <span>57 minutes ago</span>
+                                     </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <img src="imgs/logo.svg" alt="">
+                                    <p>
+                                        <b>Kafu App </b>Please Complete your Profile to get free 500 Point
+                                         <span>57 minutes ago</span>
+                                     </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <img src="imgs/logo.svg" alt="">
+                                    <p>
+                                        <b>Kafu App </b>Please Complete your Profile to get free 500 Point
+                                         <span>57 minutes ago</span>
+                                     </p>
+                                </a>
+                            </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </section>
+        </main>
+        <!-- End Main -->
+    </div>
+    <!-- End wrapper -->
+    <!-- Start footer section -->
+    <footer>
+        <div class="cpy">
+            © 2021 - Kafu all rights reserved.
+        </div>
+        <div class="social">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+
+    </footer>
+    <!-- End footer section -->
+    <div class="customer-support">
+        <a href="#" data-toggle="tooltip" data-placement="bottom"
+        title="" data-original-title="Have a question?"
+        >
+            <span>
+                <img src="imgs/customer-service-agent.svg" alt="">
+            </span>
+    </a>
+    </div>
+    
+
+    <!--Jquery Minified JS-->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!--Owl Carousel JS-->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <!--Bootstrap Minified JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+       <script> function registerFormCheck(){} </script>
+   <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="js/recaptcha.js"></script>
+    <!-- Charts Js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+    <!--ScrollBar-->
+    <script src="js/jquery.smoothscroll.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--Main Script-->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
