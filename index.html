@@ -15,6 +15,7 @@
     <!-- 
         -----Uncomment this for arabic version -----
         <link rel="stylesheet" href="css/bootstrap-rtl.min.css"> -->
+        <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
 
     <!--FontAwesome Styles-->
     <link rel="stylesheet" href="css/all.css">
@@ -27,10 +28,10 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <!--Main Style-->
     <link rel="stylesheet" href="css/style.css">
-    <!--For English-->
-    <!--<link rel="stylesheet" href="css/style-en.css">-->
     <!--Media Style-->
     <link rel="stylesheet" href="css/media.css">
+    <!--For Arabic-->
+    <link rel="stylesheet" href="css/style-ar.css">
     <!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
     <![endif]-->
@@ -50,9 +51,9 @@
         Add 'logged' class to header to make it logged in header 
         And without 'logged' class for guests
      -->
-     <header class="">
+     <header class="logged">
         <div class="container-fluid">
-            <div class="d-flex">
+            <div class="d-flex desktop-nav ">
                 <div class="logo-nav d-flex">
                     <div class="logo">
                         <img src="imgs/logo.svg" alt="">
@@ -190,6 +191,131 @@
                     </div>
                 </div>
                 <!-- End After Sign-In Menu -->
+            </div>
+            <div class="mobile-nav">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <a href="#" class="open-nav"><i class="fas fa-bars"></i></a>
+                        <img src="imgs/logo.svg" alt="">
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="m-af-sign">
+                            <div class="profile-actions">
+                                <ul class="main-ul">
+                                    <li class="has-child">
+                                        <a href="#"><i class="fas fa-search"></i></a>
+                                        <div class="search-inp s-menu">
+                                            <input type="search" placeholder="Search...">
+                                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="has-child">
+                                        <a href="#">
+                                            <i class="fas fa-bell"></i>
+                                            <b>4</b>
+                                        </a>
+                                        <div class="s-menu notifications">
+                                            <!-- Add class new for unread notificaion -->
+                                            <a href="#" class="d-flex new">
+                                                <div class="logo">
+                                                    <img src="imgs/logo.svg" alt="">
+                                                </div>
+                                                <p>
+                                                    <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                                    <span>57 minutes ago</span>
+                                                </p>
+                                            </a>
+                                            <a href="#" class="d-flex new">
+                                                <div class="logo">
+                                                    <img src="imgs/logo.svg" alt="">
+                                                </div>
+                                                <p>
+                                                    <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                                    <span>57 minutes ago</span>
+                                                </p>
+                                            </a>
+                                            <a href="#" class="d-flex">
+                                                <div class="logo">
+                                                    <img src="imgs/logo.svg" alt="">
+                                                </div>
+                                                <p>
+                                                    <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                                    <span>57 minutes ago</span>
+                                                </p>
+                                            </a>
+                                            <a href="#" class="d-flex">
+                                                <div class="logo">
+                                                    <img src="imgs/logo.svg" alt="">
+                                                </div>
+                                                <p>
+                                                    <b>Kafu App</b> Please Complete your Profile to get free 500 Point
+                                                    <span>57 minutes ago</span>
+                                                </p>
+                                            </a>
+                                            <a href="#" class="view-all">View All</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lang">
+                            <a href="#">AR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="off-canvas">
+                    <a href="#" class="close-nav"><i class="far fa-times-circle"></i></a>
+                    <div class="af-sign">
+                        <div class="profile-info">
+                            <div class="user-img">
+                                <img src="imgs/default-user.png" alt="">
+                                <div class="pf-progress">
+                                    <svg class="progress-ring" width="120" height="120">
+                                        <circle class="progress-ring__circle" stroke="#FF9054" stroke-width="4" fill="transparent" r="52" cx="60" cy="60" style="stroke-dasharray: 326.726, 326.726; stroke-dashoffset: 49.0088;"></circle>
+                                    </svg>
+                                </div>
+                                <!-- Put progress percentage in value attribute -->
+                                <input value="85" type="hidden">
+                            </div>
+                            <div class="user-info">
+                                <h5>User Name</h5>
+                                <h6>
+                                    <span><img src="imgs/wallet-icon.svg" alt=""></span>
+                                    500pts
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bf-sign">
+                        <div class="in-out">
+                            <a href="#" data-toggle="modal" data-target="#signUpModal"><i class="fas fa-lock"></i>join us</a>
+                            <a href="#" data-toggle="modal" data-target="#signInModal"><i class="fas fa-user"></i>sign in</a>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="active">
+                                <a href="index.html">home</a>
+                            </li>
+                            <li>
+                                <a href="#">about</a>
+                            </li>
+                            <li>
+                                <a href="survey.html">survey</a>
+                            </li>
+                            <li>
+                                <a href="#">services</a>
+                            </li>
+                            <li>
+                                <a href="#">partners</a>
+                            </li>
+                            <li>
+                                <a href="#">contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>

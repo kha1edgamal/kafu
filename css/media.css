@@ -11,6 +11,62 @@
     
 }
 @media(max-width:1024px){
+    .container-fluid{
+        padding: 0 20px
+    }
+    header .mobile-nav .lang a{
+        font-size:12px;
+    }
+    header .desktop-nav {
+        display: none !important;
+    }
+    .mobile-nav{
+        display:block
+    }
+    .modal.login .modal-dialog{
+        width:auto;
+    }
+    .modal.sign-up .m-btn,
+    .modal.welcome .d-flex .m-btn{
+        width:100%
+    }
+    .modal .modal-content{
+        padding: 30px 15px;
+    }
+    .modal.welcome .d-flex h1{
+        font-size:40px;
+        text-align: center;
+    }
+    header .mobile-nav .lang{
+        width:40px;
+        height:40px;
+        margin-left:15px;
+    }
+    header .mobile-nav .m-af-sign .profile-actions ul.main-ul > li > a{
+        width:40px;
+        height:40px;
+    }
+    header .mobile-nav .m-af-sign .profile-actions ul.main-ul > li a > b{
+        top:-15px;
+        right:-10px;
+    }
+    header .mobile-nav .m-af-sign li.has-child .s-menu{
+        transform: translate(-70%,52px);
+    }
+    header .mobile-nav .off-canvas .af-sign{
+        justify-content: center;
+        background-color: #fff;
+    }
+   header.logged .mobile-nav .off-canvas .close-nav{
+        background: #fff;
+    }
+    header.logged .mobile-nav .off-canvas .close-nav i{
+        color: #343456;
+    }
+    .mobile-nav .af-sign .profile-info{
+        margin:0;
+        padding-bottom:30px;
+    }
     
 }
 @media(max-width:991px){
@@ -20,6 +76,29 @@
     
 }
 @media(max-width:520px){
+    .mobile-nav .open-nav,
+    header .mobile-nav .lang,
+    header .mobile-nav .m-af-sign .profile-actions ul.main-ul > li > a{
+        width:30px;
+        height:30px;
+    }
+    header .mobile-nav .m-af-sign .profile-actions ul.main-ul > li a > b{
+        width:20px;
+        height:20px;
+        font-size:12px;
+    }
+    .mobile-nav .open-nav + img{
+        width:80px
+    }
+    .ref-code .d-flex p{
+        font-size:11px;
+    }
+    header .mobile-nav .m-af-sign .profile-actions ul.main-ul > li a > i{
+        font-size:14px;
+    }
+    header .mobile-nav .m-af-sign li.has-child .s-menu {
+        transform: translate(-76%,42px);
+    }
     
 }
 @media(max-width:425px){

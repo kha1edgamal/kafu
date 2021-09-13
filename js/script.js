@@ -1,4 +1,11 @@
 $(document).ready(function () {
+    //Open-Close Off-canvas menu
+    $('.open-nav').click(function(){
+        $('.off-canvas').addClass('opened');
+    });
+    $('.close-nav').click(function(){
+        $('.off-canvas').removeClass('opened');
+    })
     // -- Tooltip init --
     $('[data-toggle="tooltip"]').tooltip();
     //-- Remove scrollbar when modal is visible
@@ -9,6 +16,8 @@ $(document).ready(function () {
     });
      //--Owl Init --
      $('.join-slider').owlCarousel({
+         //add rtl true in arabic ver
+         rtl:true,
         animateOut: 'fadeOut',
         loop:false,
         nav:false,
@@ -25,6 +34,8 @@ $(document).ready(function () {
         }
     });
     $('.statics-slider').owlCarousel({
+         //add rtl true in arabic ver
+         rtl:true,
         loop:true,
         nav:true,
         navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
@@ -38,11 +49,13 @@ $(document).ready(function () {
                 items:1
             },
             1000:{
-                items:6
+                items:5
             }
         }
     });
     $('.partners-slider').owlCarousel({
+         //add rtl true in arabic ver
+         rtl:true,
         loop:false,
         nav:true,
         navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
@@ -61,6 +74,8 @@ $(document).ready(function () {
         }
     });
     $('.timer-slider .slider').owlCarousel({
+         //add rtl true in arabic ver
+         rtl:true,
         loop:false,
         nav:true,
         navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
@@ -88,6 +103,8 @@ $(document).ready(function () {
         $('.owl-item').eq(idx+4).addClass('smaller smaller-2');
     });
     $('.app-slider .owl-carousel').owlCarousel({
+         //add rtl true in arabic ver
+         rtl:true,
         loop:true,
         autoplay: true,
         rewind:true,
