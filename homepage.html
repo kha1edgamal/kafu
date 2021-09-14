@@ -15,7 +15,8 @@
     <!-- 
         -----Uncomment this for arabic version -----
         <link rel="stylesheet" href="css/bootstrap-rtl.min.css"> -->
-
+<!-- Select2 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
     <!--FontAwesome Styles-->
     <link rel="stylesheet" href="css/all.css">
     <!--Animate.css-->
@@ -337,6 +338,143 @@
             </div>
         </div>
     </div>
+    <!-- Sign Up Modal -->
+    <div class="modal fade solid sign-up c-survey-modal " id="createSurveyModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Create Survey
+                        <span>start earning your money back by click & answer</span>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="imgs/times-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <div class="row">
+                            <div class="col-lg-5" style="margin:auto auto 0;">
+                                <div class="photo">
+                                    <img src="imgs/create-modal-pic.png" width="100%" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="s-input ">
+                                            <input type="text" placeholder="Survey Title">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="s-input ">
+                                            <input type="radio" name="lang" id="en">
+                                            <label  for="en">
+                                                <img src="imgs/en.svg" alt="">
+                                                English
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="s-input ">
+                                            <input type="radio" name="lang" id="ar">
+                                            <label  for="ar">
+                                                <img src="imgs/ar.svg" alt="">
+                                                Arabic
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 profile-wrap">
+                                        <div class="-input">
+                                        
+                                            <select class="m-select" name="state" data-placeholder="Survey Category">
+                                                <option></option>
+                                                <option value="v1">Category1</option>
+                                                <option value="v2">Category2</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <button data-dismiss="modal" data-toggle="modal" data-target="#createSurveyModal2" class="m-btn m-btn-green ">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal fade solid sign-up c-survey-modal c-survey-modal-2 " id="createSurveyModal2" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-body">
+                    <div class="top-sec">
+                        <div class="d-flex align-items-center">
+                            <img src="imgs/company-logo.png" alt="">
+                            <div>
+                                <h3>Survey Name</h3>
+                                <p>start earning your money back by click & answer start earning your money back by click & answer start earning your money back by click & answer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="" method="POST">
+                        <div class="row">
+                            <div class="col-lg-5" style="margin:auto auto 0;">
+                                <div class="photo">
+                                    <img src="imgs/create-modal-pic.png" width="100%" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="s-input ">
+                                            <input type="text" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="s-input ">
+                                            <input type="radio" name="gender" id="male">
+                                            <label  for="male">
+                                                <i class="fas fa-male"></i>
+                                                Male
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="s-input ">
+                                            <input type="radio" name="gender" id="female">
+                                            <label for="female">
+                                                <i class="fas fa-female"></i>
+                                                Female
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 profile-wrap">
+                                        <div class="-input">
+                                        
+                                            <select class="m-select" name="state" data-placeholder="Country">
+                                                <option></option>
+                                                <option value="v1">Country 1</option>
+                                                <option value="v2">Country 2</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <button data-dismiss="modal" class="m-btn m-btn-green ">Start</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- End Modals Section -->
     <!-- Start Wrapper -->
@@ -444,7 +582,7 @@
                                 <div class="text">
                                     <h1>CREATE SURVEY</h1>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p>
-                                    <a href="#" class="m-btn m-btn-green">create</a>
+                                    <a href="#" data-toggle="modal" data-target="#createSurveyModal" class="m-btn m-btn-green">create</a>
                                 </div>
                                 <div class="photo">
                                     <img src="imgs/create-surv-pic.png" alt="">
@@ -2533,7 +2671,8 @@
        <script> function registerFormCheck(){} </script>
    <script src='https://www.google.com/recaptcha/api.js'></script>
     <script src="js/recaptcha.js"></script>
-    
+    <!-- Select2 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.full.min.js"></script>
 
     <!--ScrollBar-->
     <script src="js/jquery.smoothscroll.min.js"></script>

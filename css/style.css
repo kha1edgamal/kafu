@@ -1608,6 +1608,7 @@ footer .social ul li:hover a i {
 .modal .modal-header .modal-title{
     padding-top:5px;
     font-size: 28px;
+    text-align: center;
 }
 .modal .modal-body{
     padding: 0;
@@ -3885,3 +3886,72 @@ border-radius:  30px;
 }
 
 /* End Mobile Menu Style */
+.modal.c-survey-modal h5 span {
+    display: block;
+    text-align: center;
+    color: #7F7F7F;
+}
+.modal.c-survey-modal input[type='radio']{
+    display: none;
+}
+.modal.c-survey-modal input[type='radio']:checked + label{
+border-color: #1BBAA2;
+transition: all .3s;
+}
+.modal.c-survey-modal input[type='radio']:checked + label i{
+    color: #1bbaa2;
+    transition: all .3s;
+}
+.modal.c-survey-modal  label img{
+    width: 50px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-right: 5px;
+}
+.modal.c-survey-modal label {
+    border: 2px solid #EDEDF7;
+    border-radius: 30px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    text-transform: uppercase;
+}
+.modal.c-survey-modal form .s-input input:not(input[type='checkbox']){
+    padding: 20px;
+}
+.modal.c-survey-modal .profile-wrap .select2-container .select2-selection--single{
+    padding: 0 20px;
+}
+.modal.c-survey-modal-2  label i {
+    color: #9898A9;
+    font-size:20px;
+    margin-right:8px;
+    display: inline-block;
+}
+.modal.c-survey-modal-2 .top-sec {
+    padding:20px;
+    background: #F7F7FC;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+.modal.c-survey-modal-2 .top-sec img {
+    width: 100px;
+    height:100px;
+    padding: 10px;
+    border: 1px solid #EDEDF7;
+    border-radius: 50%;
+    background-color: #fff;
+    object-fit: contain;
+    margin-right: 20px;
+}
+.modal.c-survey-modal-2 .top-sec h3{
+    font-family: noto-bd;
+}
+.modal.c-survey-modal-2 .top-sec p{
+    color:#7B7B7E;
+    font-size: 13px
+}
