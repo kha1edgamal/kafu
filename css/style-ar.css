@@ -1,6 +1,6 @@
 * {
     direction: rtl;
-    
+    font-family: din-rg;
 }
 ::placeholder {
     text-align: right;
@@ -20,7 +20,18 @@
 ::-webkit-input-placeholder {
     text-align: right
 }
-
+.hero .join-slider .item h1,
+.kf-title,
+.services .info h1,
+.survyes-container .nav-tabs .nav-item.show .nav-link, 
+.survyes-container .nav-tabs .nav-link.active,
+.survey-card .timer h5,
+.contact-us .form-sec > h2,
+.contact-us .social-sec h6,
+.newsletter .text h1{
+    font-family: din-rg;
+    font-weight: bold;
+}
 header .logo-nav nav {
     margin: auto 60px auto auto;
 }
@@ -175,5 +186,8 @@ header .af-sign li.has-child .search-inp .search-btn, header .mobile-nav .m-af-s
     }
     header .mobile-nav .m-af-sign li.has-child .s-menu {
         transform: translate(70%,52px);
+    }
+    header .bf-sign .lang, header .mobile-nav .lang{
+        margin-right: 15px;
     }
 }

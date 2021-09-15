@@ -17,7 +17,7 @@ $(document).ready(function () {
      //--Owl Init --
      $('.join-slider').owlCarousel({
          //add rtl true in arabic ver
-        //  rtl:true,
+         rtl:true,
         animateOut: 'fadeOut',
         loop:false,
         nav:false,
@@ -35,7 +35,7 @@ $(document).ready(function () {
     });
     $('.statics-slider').owlCarousel({
          //add rtl true in arabic ver
-        //  rtl:true,
+         rtl:true,
         loop:true,
         nav:true,
         navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
@@ -46,7 +46,7 @@ $(document).ready(function () {
                 items:1
             },
             600:{
-                items:1
+                items:3
             },
             1000:{
                 items:5
@@ -55,7 +55,7 @@ $(document).ready(function () {
     });
     $('.partners-slider').owlCarousel({
          //add rtl true in arabic ver
-        //  rtl:true,
+         rtl:true,
         loop:false,
         nav:true,
         navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
@@ -66,7 +66,7 @@ $(document).ready(function () {
                 items:1
             },
             600:{
-                items:1
+                items:3
             },
             1000:{
                 items:5

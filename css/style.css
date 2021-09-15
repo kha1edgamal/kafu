@@ -352,6 +352,10 @@ select {
     font-family: noto-rg;
     src: url(../fonts/NotoSans-Regular.ttf);
 }
+@font-face {
+    font-family: din-rg;
+    src: url(../fonts/din-next-lt-w23-regular.ttf);
+}
 main {
     overflow-x: hidden;
 }

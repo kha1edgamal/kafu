@@ -67,13 +67,37 @@
         margin:0;
         padding-bottom:30px;
     }
+    header .bf-sign .lang, header .mobile-nav .lang{
+        margin-left: 15px;
+    }
     
 }
 @media(max-width:991px){
-    
+    .services{
+        min-height: initial;
+        margin-top: 0px;
+        background-image: initial;
+    }
+    .services .col-lg-6{
+        flex: 50%;
+    }
+    .survyes{
+        margin-top: 40px;
+    padding-top: 40px;
+    }
+    .contact-us .social-sec{
+        margin-top:40px;
+        border: 0 !important;
+        padding: 0 !important;
+    }
 }
 @media(max-width:768px){
-    
+    .hero .join-slider .item > div:nth-child(2) img{
+        display: none;
+    }
+    .our-partners .kf-sub-title{
+        width: auto;
+    }
 }
 @media(max-width:520px){
     .mobile-nav .open-nav,
@@ -99,7 +123,144 @@
     header .mobile-nav .m-af-sign li.has-child .s-menu {
         transform: translate(-76%,42px);
     }
-    
+    .services .img{
+        width:80px;
+        height:180px;
+        margin:initial
+    }
+    .services .col-lg-6:first-of-type{
+        flex:30%
+    }
+    .services .col-lg-6:last-of-type{
+        flex:70%
+    }
+    .hero .join-slider .item h3{
+        font-size:20px;
+    }
+    .hero .join-slider .item h1{
+        font-size:25px;
+    }
+    .hero .join-slider .item p{
+        width: auto;
+        font-size: 13px;
+        line-height: 23px;
+    }
+    .m-btn{
+        width: 150px;
+        height: 40px;
+        font-size: 12px
+    }
+    .hero .bottom-sec .statics-slider .item h2{
+        font-size: 20px;
+    }
+    .hero .bottom-sec .statics-slider .item h6{
+        font-size: 13px;
+    }
+    .hero .bottom-sec .statics-slider .item p{
+        font-size: 11px;
+    }
+    .kf-title{
+        font-size: 16px
+    }
+    .services .info h1{
+        font-size: 20px;
+    }
+    .services .info p{
+        -webkit-line-clamp: 2;
+        font-size: 13px;
+        min-height: 40px
+    }
+    .services .info ul li a{
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    .customer-support a span{
+        width:50px;
+        height:50px;
+    }
+    .services .info ul{
+        margin-top:20px;
+    }
+    .kf-sub-title{
+        font-size:13px;
+        line-height: normal;
+    }
+    .survyes-container .nav-tabs .nav-link{
+        font-size:12px;
+        padding: 10px 12px;
+        margin-bottom:10px;
+    }
+    .survey-card .comp-logo{
+        min-width: 60px;
+        min-height: 60px;
+    }
+    .survey-card .text > p {
+        font-size: 13px;
+        line-height: normal;
+    }
+    .survey-card .text > h6{
+        font-size:11px;
+    }
+    .survey-card .timer .m-btn{
+        width: auto;
+        font-size: 13px;
+        height: 30px;
+        padding: 0 15px;
+    }
+    .survey-card .timer h5{
+        font-size:14px;
+    }
+    .survey-card .timer h5 span{
+        font-size:12px;
+    }
+    .our-partners .partners-slider .item .logo{
+        width:100px;
+        height: 100px;
+    }
+    .our-partners .partners-slider .item .logo{
+        font-size:14px;
+    }
+    .contact-us .form-sec > h2{
+        font-size:18px;
+    }
+    .contact-us .form-sec > p{
+        font-size: 13px;
+        line-height: normal;
+        margin-top: 10px;
+    }
+    .contact-us .form-sec form .d-flex{
+        display: block !important
+    }
+    .contact-us .form-sec form .d-flex > div{
+        width: 100%;
+    }
+    .contact-us .form-sec form textarea{
+        height: 150px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    }
+    .newsletter{
+        padding: 50px 0
+    }
+    .newsletter .text h1,
+    .newsletter .text h1 i{
+        font-size:20px
+    }
+    .newsletter .text p{
+        font-size:13px;
+        line-height: normal;
+    }
+    .newsletter form{
+        align-items: center;
+        margin-top:20px
+    }
+    .newsletter form input[type='email']{
+        width: auto;
+        height:40px;
+        padding:0 20px;
+        font-size:12px
+    }
 }
 @media(max-width:425px){
     
