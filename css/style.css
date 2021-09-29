@@ -3959,3 +3959,14 @@ transition: all .3s;
     color:#7B7B7E;
     font-size: 13px
 }
+.single-survey-wrap .question-card .head .action-btns {
+    column-gap: 15px;
+}
+.single-survey-wrap .question-card .head .action-btns a {
+    color: #9999AA;
+    transition: all .3s;
+}
+.single-survey-wrap .question-card .head .action-btns a:hover{
+    color: #000;
+    transition: all .3s;
+}
