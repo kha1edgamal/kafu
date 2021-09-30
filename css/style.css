@@ -115,6 +115,9 @@ main {
     font-family: noto-rg;
     color: #7E7E7E
 }
+[invisible] {
+    opacity: 0 !important;
+}
 button{
     border: 0;
     background-color: transparent;
@@ -2686,7 +2689,8 @@ background-color: #F05C6D
     padding-right: 100px;
 }
 .single-survey-wrap .question-card  .answer.evaluation ul li label{
-    display: block;
+    display: flex;
+    justify-content: center;
     width: 100%
 }
 .single-survey-wrap .question-card  .answer.evaluation ul li label span{
@@ -2708,21 +2712,44 @@ background-color: #F05C6D
 }
 .single-survey-wrap .question-card .answer.evaluation ul li:not(:last-child) label::after{
     content: '';
-    position:absolute;
-    top:25px;
-    left:0;
+    position: absolute;
+    top: 25px;
+    left: 40px;
     height: 3px;
-    width:100%;
+    width: 100%;
     background: #EDEDF7;
 }
 .single-survey-wrap .question-card  .answer.evaluation ul li{
     position: relative
 }
-.single-survey-wrap .question-card  .answer.evaluation ul li > p {
+.single-survey-wrap .question-card  .answer.evaluation ul li > input[type="text"] {
     color: #8F8FA5;
     font-size: 15px;
-    margin-top: 5px;
+    margin-top: 10px;
     text-align: center;
+    display: inline-block;
+    width: 130px;
+    border: 1px solid #EDEDF7;
+    border-radius: 30px;
+    padding: 10px;
+    transition: all .3s;
+}
+.single-survey-wrap .question-card  .answer.evaluation ul li > input[type="text"]:focus{
+    border-color: #343456;
+    transition: all .3s;
+}
+.single-survey-wrap .c-write .text-answer {
+    margin-top: 30px;
+}
+.single-survey-wrap .c-write .text-answer textarea {
+    background-color: #F7F7FC;
+    border: 1px solid #EDEDF7;
+    transition: all .3s;
+
+}
+.single-survey-wrap .c-write .text-answer textarea:focus {
+    background: #fff;
+    transition: all .3s;
 }
 .single-survey-wrap .question-card  .answer.evaluation ul li input:checked + label span {
     background: #343456;
