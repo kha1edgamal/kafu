@@ -1026,10 +1026,9 @@ header .mobile-nav .m-af-sign .notifications .view-all:hover
     border: 0;
     margin-bottom: 30px;
     justify-content: center;
+    column-gap:15px
 }
-.survyes-container .nav-tabs li:not(:last-child){
-    margin-right: 15px;
-}
+
 .survyes-container .nav-tabs .nav-link{
     border: 0;
     background: #EDEDF7;
@@ -2187,7 +2186,9 @@ footer .social ul li:hover a i {
  }
 .home-wrap .my-stats .web-mob .box .m-progress  .num{
     position: absolute;
-    right: -35px
+    right: -35px;
+    top:50%;
+    transform: translateY(-50%);
 }
 .home-wrap .survyes{
     margin-top: 0;
@@ -2327,10 +2328,9 @@ footer .social ul li:hover a i {
 }
 .home-wrap .timer-slider .actions{
     display: flex;
+    column-gap:10px
 }
-.home-wrap .timer-slider .actions li:not(:last-child) {
-    margin-right: 10px;
-}
+
 .home-wrap .timer-slider .actions li a{
     height:50px;
     width: 50px;
@@ -2427,8 +2427,8 @@ background-color: #F05C6D
 .home-wrap .app .text ol li:first-child{
     margin-bottom: 10px
 }
-.home-wrap .app .text .d-flex a:first-child{
-    margin-right: 20px
+.home-wrap .app .text .d-flex {
+    column-gap:20px
 }
 .home-wrap .app .text .d-flex a{
     transition: all .3s;
@@ -2567,8 +2567,8 @@ background-color: #F05C6D
 .single-survey-wrap .welcome .survey-info .star {
     margin-right: 40px;
 }
-.single-survey-wrap .welcome .survey-info .stats li:not(:last-child){
-     margin-right:20px;
+.single-survey-wrap .welcome .survey-info .stats {
+     column-gap: 20px;
 }
 .single-survey-wrap .welcome .survey-info .stats li{
     font-family: noto-bd;
@@ -2595,7 +2595,9 @@ background-color: #F05C6D
     border: 1px solid #EDEDF7;
     padding: 10px;
     background: #fff;
-    margin-right: 20px;
+}
+.single-survey-wrap .title-page .survey-title.d-flex{
+    column-gap:20px
 }
 .single-survey-wrap .survey-title  h1{
     font-family: noto-bd;
@@ -2616,11 +2618,10 @@ background-color: #F05C6D
 .single-survey-wrap .title-page .pages ul {
     display: flex;
     align-items: center;
+    column-gap: 15px
 }
 
-.single-survey-wrap .title-page .pages ul li:not(:last-child){
-    margin-right: 15px;
-}
+
 .single-survey-wrap .title-page .pages ul li a{
     display: flex;
     width: 40px;
@@ -2660,10 +2661,9 @@ background-color: #F05C6D
     padding: 20px 30px;
     background: #fff;
     display: flex;
+    column-gap: 20px
 }
-.single-survey-wrap .question-card  .question div:first-of-type{
-    margin-right: 30px;
-}
+
 
 .single-survey-wrap .question-card  .question h1{
     color: #000;
@@ -2770,6 +2770,7 @@ background-color: #F05C6D
     display: flex;
     align-items: center;
     cursor: pointer;
+    column-gap: 10px;
 }
 .single-survey-wrap .question-card  .answer.multiple-choice ul {
     display: flex;
@@ -2789,7 +2790,6 @@ background-color: #F05C6D
     background : #EDEDF7;
     color: #9090A6;
     border-radius: 50%;
-    margin-right: 15px;
     transition: all .3s;
 }
 .single-survey-wrap .question-card  .answer.multiple-choice label img{
@@ -2797,7 +2797,6 @@ background-color: #F05C6D
     height: 100px;
     border-radius: 15px;
     object-fit: cover;
-    margin-right: 15px;
 }
 .single-survey-wrap .question-card  .answer.multiple-choice label p {
     width: 350px;
@@ -2849,6 +2848,7 @@ background-color: #F05C6D
     padding: 30px;
     border-radius: 30px;
     box-shadow: 0 0 20px #00000029;
+    column-gap: 30px
 }
 .create-survey-wrap .avatar-upload .avatar-preview{
     width: 100px;
@@ -2862,7 +2862,6 @@ background-color: #F05C6D
 }
 .create-survey-wrap .avatar-upload{
     margin-bottom:0;
-    margin-right: 30px;
 }
 .create-survey-wrap .create-info  .-input{
     width: 100%
@@ -2937,6 +2936,9 @@ background-color: #F05C6D
     font-family: noto-bd;
     margin-bottom:10px;
 }
+.create-survey-wrap .c-write .edit-question .answer-content .title{
+    margin: 0
+}
 .create-survey-wrap .c-write .edit-question .title span {
     
     vertical-align: middle;
@@ -2955,8 +2957,10 @@ background-color: #F05C6D
     height: 113px;
     padding: 0 30px;
 }
+.create-survey-wrap .c-write .edit-question .d-flex{
+    column-gap: 15px
+}
 .create-survey-wrap .c-write .edit-question .img-vid{
-    margin-left: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2981,12 +2985,12 @@ background-color: #F05C6D
 .create-survey-wrap .c-write .edit-question .choose-answer {
     margin-top: 20px;
     display: flex;
+    column-gap: 30px;
 }
 .create-survey-wrap .c-write .edit-question .choose-answer h5{
     font-size:18px;
     color: #F05C6D;
     font-family: noto-bd;
-    margin-right:30px;
     align-self: center;
 }
 .create-survey-wrap .c-write .edit-question .choose-answer h5 i{
@@ -2996,10 +3000,9 @@ background-color: #F05C6D
 }
 .create-survey-wrap .c-write .edit-question .choose-answer ul{
     display: flex;
+    column-gap: 15px
 }
-.create-survey-wrap .c-write .edit-question .choose-answer ul li:not(:last-child){
-    margin-right:15px;
-}
+
 .create-survey-wrap .c-write .edit-question .choose-answer ul li a,
 .create-survey-wrap .c-write .edit-question .answer-opt .add-answer a{
     padding: 10px 20px;
@@ -3009,6 +3012,7 @@ background-color: #F05C6D
     background: #F7F7FC;
     border-radius: 30px;
     transition: all .3s;
+    column-gap: 5px
 }
 .create-survey-wrap .c-write .edit-question .choose-answer ul li a:hover,
 .create-survey-wrap .c-write .edit-question .answer-opt .add-answer a:hover{
@@ -3024,7 +3028,6 @@ background-color: #F05C6D
 .create-survey-wrap .c-write .edit-question .choose-answer ul li a i ,
 .create-survey-wrap .c-write .edit-question .answer-opt .add-answer a i{
     color: #1BBAA2;
-    margin-right: 5px;
 }
 .create-survey-wrap .pts-text{
     font-size: 15px;
@@ -3062,6 +3065,7 @@ background-color: #F05C6D
 .create-survey-wrap .answer-opt ul li label {
     display: flex;
     align-items: center;
+    column-gap: 15px
 }
 .create-survey-wrap .c-write .edit-question .answer-opt .img-vid{
     width: 150px;
@@ -3074,6 +3078,7 @@ background-color: #F05C6D
     display: flex;
     justify-content: flex-end;
     margin-top:20px;
+    column-gap: 15px
 }
 .create-survey-wrap .c-write .edit-question .cancel-add-btns .m-cancel {
     height:58px;
@@ -3085,7 +3090,6 @@ background-color: #F05C6D
     justify-content: center;
     align-items: center;
     transition: all .3s;
-    margin-right: 15px;
 }
 .create-survey-wrap .c-write .edit-question .cancel-add-btns .m-cancel:hover{
     opacity: .8;
@@ -3202,6 +3206,7 @@ background-color: #F05C6D
     color: #343456;
     display: flex;
     align-items: center;
+    column-gap:10px
 }
 .survey-options .settings .set-item .config label span ,
 .survey-options .settings .agree-checkboxes label span{
@@ -3213,7 +3218,6 @@ background-color: #F05C6D
     background-color: #EDEDF7;
     color: #7A7A7D;
     border-radius: 50%;
-    margin-left:15px;
     transition: all .3s;
 }
 .survey-options .settings .set-item .config input:checked + label span,
@@ -3344,7 +3348,9 @@ background-color: #F05C6D
       align-items: center;
       border: 1px solid #EDEDF7;
       border-radius: 50%;
-      margin-right: 30px;
+  }
+  .survey-options .promotion .d-flex{
+      column-gap: 30px;
   }
   .survey-options .promotion .icon  img{
       object-fit: contain;
@@ -3376,14 +3382,12 @@ background-color: #F05C6D
       display: flex;
       align-items: center;
       cursor: pointer;
+      column-gap:10px
   }
   .survey-options .settings .agree-checkboxes > div:first-of-type{
       margin-bottom: 20px
   }
-  .survey-options .settings .agree-checkboxes label span{
-      margin-left: 0;
-      margin-right: 10px;
-  }
+  
   .survey-options .settings .btns-section{
       margin: 50px 0
   }
@@ -3397,10 +3401,9 @@ background-color: #F05C6D
     border-radius: 30px;
     transition: all .3s;
     border: 1px solid;
+    column-gap: 10px;
   }
-  .survey-options .settings .btns-section div:first-of-type a i {
-      margin-right: 10px;
-  }
+  
   .survey-options .settings .btns-section div:first-of-type a:hover{
       opacity:.7;
       transition: all .3s;
@@ -3408,7 +3411,9 @@ background-color: #F05C6D
   .survey-options .settings .btns-section .prev-btn {
     background: #343456;
     color: #fff;
-    margin-right: 15px;
+  }
+  .survey-options .settings .btns-section > .d-flex {
+    column-gap: 15px;
   }
   .survey-options .settings .btns-section .save-btn{
       border-color: #343456;
@@ -3450,12 +3455,16 @@ background-color: #F05C6D
 }
 .my-stats-wrap .download-report > div {
     margin-bottom: 30px;
+    display:flex;
+    flex-wrap: wrap;
+    column-gap:15px;
+    row-gap: 10px;
 }
 .my-stats-wrap .download-report h2{
     font-family: noto-bd;
     font-size:20px;
-    margin-bottom: 10px;
     color: #343456;
+    flex:100%
 }
 .my-stats-wrap .download-report a {
     background-color: #EDEDF7;
@@ -3470,9 +3479,7 @@ background-color: #F05C6D
     opacity: .7;
     transition: all .3s;
 }
-.my-stats-wrap .download-report > div a:first-of-type{
-    margin-right: 15px;
-}
+
 .my-stats-wrap .download-report a i {
     margin: 0 5px;
     vertical-align: baseline;
@@ -3501,6 +3508,7 @@ background-color: #F05C6D
 }
 .personal-account-wrap .personal-container .d-flex{
     align-items: center;
+    column-gap: 10px;
 }
 .personal-account-wrap .avatar-upload .avatar-preview{
     width:130px;
@@ -3514,9 +3522,6 @@ background-color: #F05C6D
 }
 .personal-account-wrap .avatar-upload{
     margin-bottom: 0;
-}
-.personal-account-wrap .personal-container .p-text{
-    margin-left: 10px;
 }
 .personal-account-wrap .personal-container .p-text h2 {
     font-family: noto-bd;
@@ -3533,10 +3538,9 @@ background-color: #F05C6D
 }
 .personal-account-wrap .info-tabs .nav-tabs {
     border-bottom: 0;
+    gap: 10px 25px
 }
-.personal-account-wrap .info-tabs .nav-tabs li:not(:last-child){
-    margin-right: 25px;
-}
+
 .personal-account-wrap .info-tabs .nav-tabs li  i {
     color: #9494A8;
     margin-right:5px;
@@ -3618,12 +3622,13 @@ border-radius:  30px;
 }
 .personal-account-wrap .wallet-balance .d-flex p{
     text-transform: uppercase;
-
+    display: flex;
+    align-items: center;
+    column-gap: 5px
 }
 .personal-account-wrap .wallet-balance .d-flex p b{
     color: #1BBAA2;
     vertical-align: baseline;
-    margin-right:5px;
     font-size:18px;
 }
 .personal-account-wrap .wallet-balance .d-flex .w-pts p b {
@@ -3732,6 +3737,14 @@ border-radius:  30px;
 .personal-account-wrap .download-report > div{
     margin: auto 0;
 }
+.personal-account-wrap .download-report > div:last-child{
+    display:flex;
+    flex-wrap: wrap;
+    gap:15px
+}
+.personal-account-wrap.my-stats-wrap .download-report > div a:first-of-type{
+    margin: 0
+}
 .personal-account-wrap .h-table {
     margin-top:20px;
     margin-bottom:40px;
@@ -3750,8 +3763,10 @@ border-radius:  30px;
 }
 .personal-account-wrap .h-table .h-row i{
     font-size:40px;
-    margin-right: 40px;
     width:34px;
+}
+.personal-account-wrap .h-table .h-row .d-flex{
+    column-gap:40px
 }
 .personal-account-wrap .h-table .h-row i.fa-long-arrow-alt-down{
     color:#1BBAA2
@@ -3997,3 +4012,48 @@ transition: all .3s;
     color: #000;
     transition: all .3s;
 }
+.my-stats-2 .timer-slider {
+    padding:0;
+    background: none
+}
+.my-stats-2 .timer-slider .item{
+    column-gap: 30px
+}
+.my-stats-2 .timer-slider .text,
+.my-stats-2 .timer-slider .counter, 
+.my-stats-2 .timer-slider .pts p{
+  background: #5D5D78;   
+ }
+ .my-stats-2 .timer-slider .pts p{
+     color: #fff
+ }
+ .my-stats-2  .timer-slider .pts p span{
+    color:  #AEAEBC;
+ }
+ .my-stats-2 .timer-slider .pts > i{
+    color: #fff
+ }
+ .my-stats-2 .title-page .btns-section{
+     column-gap: 10px;
+ }
+ .my-stats-2 .title-page .btns-section > .m-btn{
+     column-gap: 3px;
+ }
+ .my-stats-2 .title-page .btns-section > .m-btn:first-child{
+     background: #343456;
+     color: #fff
+ }
+ .my-stats-2 .title-page .btns-section > .m-btn:first-child:hover{
+     opacity: .8;
+     transition: all .3s;
+ }
+ .single-survey-wrap .welcome .back-btn{
+     display: none;
+ }
+ .single-survey-wrap .welcome.has-back .back-btn{
+     display:flex;
+     column-gap:10px
+ }
+ .single-survey-wrap .welcome.has-back h1{
+     display: none;
+ }

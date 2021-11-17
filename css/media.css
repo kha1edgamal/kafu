@@ -70,7 +70,23 @@
     header .bf-sign .lang, header .mobile-nav .lang{
         margin-left: 15px;
     }
-    
+    footer .social{
+        position: static;
+    transform: initial;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    }
+    footer .social ul li a{
+        width: 30px;
+        height: 30px;
+    }
+    footer .social ul li a i{
+        font-size: 13px
+    }
+    .survyes-container{
+        margin-top: 40px
+    }
 }
 @media(max-width:991px){
     .services{
@@ -89,6 +105,125 @@
         margin-top:40px;
         border: 0 !important;
         padding: 0 !important;
+    }
+    .profile-wrap:not(.personal-account-wrap) .avatar-upload{
+        margin: auto auto 30px auto;
+    }
+    .create-survey-wrap .create-info .text{
+        justify-content: center;
+    }
+    .create-survey-wrap .create-info .survey-info > .d-flex {
+        flex-direction: column;
+    }
+    .create-survey-wrap .c-write .edit-question .d-flex > .-input{
+        width:70%
+    }
+    .create-survey-wrap .c-write .edit-question .d-flex > .img-vid {
+        width:30%
+    }
+    .create-survey-wrap .c-write .edit-question .text-answer .d-flex > .-input{
+        width: 100%
+    }
+    .create-survey-wrap .answer-opt ul li{
+        flex: 100%;
+        margin-left:0;
+        margin-right: 0
+    }
+    .home-wrap:not(.personal-account-wrap) .my-stats .stats {
+        margin-bottom:30px
+    }
+    .home-wrap .timer-slider .item{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+    }
+    .home-wrap .quick-nav .row{
+        row-gap:20px
+    }
+    .home-wrap .app .owl-carousel .owl-item img{
+        width:100px;
+        margin: auto;
+    }
+    .home-wrap .app .app-slider{
+        margin-top:60px
+    }
+    .personal-account-wrap .btns-sec{
+        flex-direction: column-reverse;
+        row-gap: 20px;
+    }
+    .personal-account-wrap .personal-container .d-flex{
+        justify-content: center;
+        margin-bottom:30px
+    }
+    .personal-account-wrap .waller-container .row{
+        row-gap: 20px
+    }
+    .single-survey-wrap .welcome{
+        flex-direction: column;
+        row-gap: 20px;
+        justify-content: center !important;
+        align-items: center;
+    }
+    .single-survey-wrap .welcome h1{
+        text-align: center;
+    }
+    .single-survey-wrap .title-page .d-flex{
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center;
+    
+    }
+    .single-survey-wrap .survey-title h1{
+        text-align: center;
+    }
+    .single-survey-wrap .title-page{
+        padding-bottom: 40px;
+    }
+    .single-survey-wrap .question-card .answer.evaluation ul{
+        flex-direction: column;
+    }
+    .single-survey-wrap .question-card .answer.evaluation ul li:not(:last-child){
+        padding:0 0 100px 0
+    }
+    .single-survey-wrap .question-card .answer.evaluation ul li:not(:last-child) label::after{
+        width: 3px;
+        height:100%;
+        left:50%;
+        transform:translateX(-50%);
+        right: auto;
+    }
+    .single-survey-wrap .question-card .answer.evaluation{
+        padding: 30px 0
+    }
+    .single-survey-wrap .question-card .answer.evaluation ul li > input[type="text"]{
+        position: relative
+    }
+    .survey-options .survey-info .d-flex p{
+        margin:10px 0 0 0;
+    }
+    .survey-options .settings .set-item .text,
+    .survey-options .settings .set-item .config{
+        width:auto;
+        text-align: center;
+        
+    }
+    .survey-options .settings .set-item > .d-flex{
+        flex-direction: column;
+        row-gap:30px
+    }
+    .survey-options .settings .set-item:nth-of-type(3) .config,
+    .survey-options .settings .set-item:nth-of-type(4) .config,
+    .survey-options .settings .set-item:nth-of-type(6) .config
+    {
+        gap: 30px
+    }
+    .my-stats-wrap .chart-container{
+        padding: 15px
+    }
+    .my-stats-2 .title-page .btns-section{
+        flex-direction: row;
+        margin-top:20px
     }
 }
 @media(max-width:768px){
@@ -145,9 +280,11 @@
         font-size: 13px;
         line-height: 23px;
     }
-    .m-btn{
+    .m-btn,
+    .m-cancel,
+    .survey-options .settings .btns-section div:first-of-type a{
         width: 150px;
-        height: 40px;
+        height: 40px !important;
         font-size: 12px
     }
     .hero .bottom-sec .statics-slider .item h2{
@@ -187,7 +324,7 @@
         line-height: normal;
     }
     .survyes-container .nav-tabs .nav-link{
-        font-size:12px;
+        font-size:10px;
         padding: 10px 12px;
         margin-bottom:10px;
     }
@@ -261,9 +398,309 @@
         padding:0 20px;
         font-size:12px
     }
+    .pg-head{
+        padding: 20px
+    }
+    .pg-head .container-fluid {
+        padding:0;
+    }
+    .pg-head .title{
+        font-size: 20px;
+    }
+    .pg-head .kf-breadcrumb ul li a{
+        font-size: 11px
+    }
+    .profile-wrap .pg-head .complete-text, .personal-account-wrap .complete-text{
+        width: 180px
+    }
+    .survey-wrap .dropdown > .m-btn{
+        font-size: 10px
+    }
+    .survey-card .poll-card .vote .m-btn{
+        width: 90px;
+        font-size: 13px;
+    }
+    .create-survey-wrap .c-write .edit-question .choose-answer,
+    .create-survey-wrap .c-write .edit-question .choose-answer ul{
+        flex-wrap: wrap;
+        gap: 15px
+    }
+    .create-survey-wrap .create-info .text img {
+        width: 100px
+    }
+    .create-survey-wrap .create-info .text h1,
+    .create-survey-wrap .add-question i,
+    .create-survey-wrap .add-question a,
+    .create-survey-wrap .c-write .edit-question .title{
+        font-size: 20px;
+    }
+    .create-survey-wrap .c-write .edit-question .-input textarea{
+        height: 90px;
+        paddinG: 0 20px;
+        font-size: 12px
+    }
+    .create-survey-wrap .c-write .edit-question .img-vid label i{
+        font-size: 15px
+    }
+    .create-survey-wrap .c-write .edit-question .img-vid label,
+    .create-survey-wrap .pts-text{
+        font-size: 10px
+    }
+    .create-survey-wrap .answer-opt ul li label{
+        flex-wrap:wrap;
+        gap: 15px
+    }
+    .create-survey-wrap .c-write .edit-question .answer-opt .-input{
+        width: auto;
+        flex: 1
+    }
+    .create-survey-wrap .c-write .edit-question .answer-opt .img-vid{
+        width: 100%
+    }
+    .create-survey-wrap .answer-opt ul li:not(:last-child){
+        padding-bottom:20px;
+        border-bottom:1px solid #e2e2e2
+    }
+    .single-survey-wrap .question-card .head h5{
+        font-size: 12px
+    }
+    .single-survey-wrap .question-card .question{
+        padding: 10px
+    }
+    .single-survey-wrap .question-card .question img{
+        width:60px;
+        height:60px;
+        border-radius: 10px
+    }
+    .single-survey-wrap .question-card .question h1{
+        font-size: 12px;
+    }
+    .single-survey-wrap .question-card .answer{
+        padding: 10px
+    }
+    .single-survey-wrap .question-card .answer.multiple-choice label img{
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    .single-survey-wrap .question-card .answer.multiple-choice label p{
+        width: auto;
+        font-size: 10px
+    }
+    .single-survey-wrap .question-card .answer.multiple-choice ul li{
+        flex: 100%
+    }
+    .create-survey-wrap .create-info .survey-info h3{
+        display: flex;
+        width:150px;
+        margin:auto;
+        justify-content: center;
+    }
+    .create-survey-wrap .total{
+        padding: 20px 0
+    }
+    .home-wrap .my-stats .stats h1{
+        font-size:25px
+    }
+    .home-wrap .my-stats .stats h1 i{
+        font-size:20px
+    }
+    .home-wrap .my-stats .stats .d-flex{
+        flex-wrap: wrap;
+        justify-content: initial;
+        gap: 30px
+    }
+    .home-wrap .my-stats .d-flex > div .icon{
+        width:50px;
+        height: 50px
+    }
+    .home-wrap .my-stats .stats .d-flex .icon b,
+    .home-wrap .my-stats .stats .d-flex h5{
+        font-size: 10px
+    }
+    .home-wrap .my-stats .d-flex > div .icon:after{
+        right:-6px;
+        top:-6px;
+        width:60px;
+        height:60px;
+    }
+    .home-wrap .my-stats .web-mob .box h3, .my-stats-wrap .box > h3{
+        font-size:11px
+    }
+    .home-wrap .my-stats .web-mob .box h4,
+    .home-wrap .my-stats .web-mob .box .m-progress .num{
+        font-size: 10px;
+    }
+    .home-wrap .my-stats .web-mob .box .m-progress{
+        height:10px
+    }
+    .home-wrap .my-stats .web-mob{
+        flex-wrap: wrap;
+        row-gap:30px
+    }
+    .home-wrap .my-stats .web-mob .box{
+        width:100%;
+        flex-grow: 1;
+    }
+    .home-wrap .create-surv .text h1{
+        font-size:15px
+    }
+    .home-wrap .create-surv .text p{
+        font-size:10px;
+        line-height: 20px;
+    }
+    .home-wrap .create-surv .photo {
+        display: none;
+    }
+    .home-wrap .create-surv .text{
+        padding: 30px
+    }
+    .home-wrap .my-stats{
+        padding: 40px 0
+    }
+    .home-wrap .quick-nav .box a,
+    .home-wrap .quick-nav .box a span{
+        font-size:12px
+    }
+    .home-wrap .app .text img{
+        width: 100px;
+    }
+    .home-wrap .app .text ol li{
+        font-size:11px
+    }
+    .home-wrap .app .owl-carousel .owl-item img{
+        width:80px
+    }
+    .personal-account-wrap .my-stats .stats .d-flex{
+        justify-content: center;
+    }
+    .personal-account-wrap .avatar-upload .avatar-preview{
+        width:90px;
+        height:90px
+    }
+    .personal-account-wrap .avatar-upload .avatar-edit{
+        bottom:-7px
+    }
+    .personal-account-wrap .personal-container .p-text h2{
+        font-size:15px
+    }
+    .personal-account-wrap .personal-container .p-text h2 span{
+        font-size:11px
+    }
+    .personal-account-wrap .info-tabs .nav-tabs li a{
+        font-size: 12px
+    }
+    .personal-account-wrap .edit-profile{
+        padding: 20px 0
+    }
+    .personal-account-wrap .download-report {
+        flex-direction: column;
+        row-gap:15px
+    }
+    .personal-account-wrap .h-table .h-row > div:first-child {
+        flex: 100%;
+    }
+    .personal-account-wrap .h-table .h-row{
+        flex-wrap: wrap;
+        row-gap:15px
+    }
+    .personal-account-wrap .h-table .h-row i{
+        font-size:20px
+    }
+    .personal-account-wrap .h-table .h-row h6,
+    .personal-account-wrap .h-table .h-row h6 b,
+    .personal-account-wrap .h-table .h-row h6 span{
+        font-size:12px;
+    }
+    .personal-account-wrap .h-table .h-row > div .d-flex{
+        align-items: center;
+    }
+    .single-survey-wrap .welcome h1,
+    .single-survey-wrap .survey-title h1{
+        font-size: 20px
+    }
+    .single-survey-wrap .welcome h1 span,
+    .single-survey-wrap .survey-title h1 span{
+        font-size: 10px
+    }
+    .single-survey-wrap .survey-info{
+        flex-direction: column;
+        row-gap:10px;
+        align-items: center;
+    }
+    .single-survey-wrap .welcome .survey-info .counter,
+    .single-survey-wrap .welcome .survey-info .star{
+        margin:0
+    }
+    .single-survey-wrap .welcome .survey-info .stats li,
+    .single-survey-wrap .title-page .pages h6{
+        font-size: 12px
+    }
+    .single-survey-wrap .survey-title img{
+        width:80px;
+        height:80px
+    }
+    .single-survey-wrap .title-page .pages{
+        margin-top:10px
+    }
+    .single-survey-wrap .question-card .answer.evaluation ul li label span{
+        width:40px;
+        height:40px
+    }
+    .survey-options .settings .set-item .config{
+        flex-direction: column;
+        row-gap:15px;
+        width:100%
+    }
+    .survey-options .settings .set-item .config > span:only-of-type{
+        margin:0;
+        padding:0;
+        transform:rotate(90deg)
+    }
+    .survey-options .settings .set-item .config.select-config > div{
+        width:100%
+    }
+    .survey-options .promotion .icon{
+        display: none;
+    }
+    .survey-options .settings .btns-section{
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    .my-stats-wrap .my-stats .stats .d-flex{
+        margin:0
+    }
+    .my-stats-wrap .my-stats .web-mob .box h4{
+        width: 20%
+    }
 }
 @media(max-width:425px){
-    
+    .personal-account-wrap .transfer .d-flex{
+        flex-direction: column;
+        row-gap: 15px
+    }
+    .personal-account-wrap .transfer .d-flex form .-input input{
+        height:50px
+    }
+    .personal-account-wrap .recharge, .personal-account-wrap .wallet-balance, .personal-account-wrap .transfer{
+        height: auto;
+    }
+    .personal-account-wrap .recharge .text h1{
+        font-size:14px
+    }
+    .personal-account-wrap .recharge .text p{
+        font-size:9px
+    }
+    .survey-options .settings .btns-section > div:nth-child(2){
+        flex: 100%
+    }
+    .survey-options .settings .btns-section > div:nth-child(2) > .m-btn{
+        width:100%
+    }
+    .survey-options .settings .btns-section > .d-flex,
+    .survey-options .settings .btns-section div:first-of-type a{
+        flex-grow: 1;
+    }
 }
 @media(max-width:360px){
     
